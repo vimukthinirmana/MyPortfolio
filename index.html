@@ -1,9 +1,9 @@
 <html>
 <head>
-    <title> my first websit</title>
-
+<!--    Main root-->
+<!--    Document metadata-->
     <meta charset="UTF-8">
-    <title>My webPage</title>
+    <title>My portfolio</title>
     <!--    <base href="localhost">-->
     <meta name="keywords" content="webDeveloper,viukthi,srilanka,ijse,gdse">
     <meta name="description" content="this is my testing fist websit">
@@ -18,7 +18,7 @@
 </head>
 
 <body>
-
+<!--Sectioning root-->
 
 <!-- --------------------------------- header -------------------------------------- -->
 <header>
@@ -26,13 +26,13 @@
     <h1 style="color: blueviolet; text-align: left; font-family: Alaska">portfolio</h1>
 
     <nav>
-        <menu>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skill">Skill</a></li>
-            <li><a href="#servise">Servise</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <menu style="text-align: right;  ">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skill">Skill</a>
+            <a href="#servise">Servise</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </menu>
 
     </nav>
@@ -47,46 +47,57 @@
 
         <aside>
             <img src="assets/img/myImage1.png" style="width: 30% ">
-
         </aside>
 
         <article>
-                <label style="font-size: 30px">Hi,I'm</label><br>
-                <label style="font-size: 60px">Vimukthi Nirmana</label><br>
-                <label style="font-size: 35px"> font-end Developer</label><br>
-                <button>Hire me</button>
+            <label style="font-size: 30px">Hi,I'm</label><br>
+            <label style="font-size: 60px">Vimukthi Nirmana</label><br>
+            <label style="font-size: 35px"> font-end Developer</label><br>
+            <button>Hire me</button>
         </article>
 
     </section>
 
 
     <section id="about">
-        <article>
 
-            <!--                <dfn id="about"> About </dfn>>-->
-            <h2 align="center">About </h2>
-            <img usemap="#kvns"
-                 src="assets/img/_skin_white_HD_cartoonboyimage3D_look_perfect_handsomebo_3a853c26-bb73-4172-9547-8b723e842420%20-%20Copy.png"
-                 alt="my image">
-            <map name="kvns">
-                <area shape="circle" coords="10,10,20" href="http://ijse.lk" alt="link">
-            </map>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem deleniti quo vitae,
-                sint deserunt laboriosam quisquam assumenda <br>officiis accusamus similique incidunt autem hic,
-                commodi,
-                distinctio repellat facilis. Tenetur, ducimus earum!</p>
+        <!--       about -->
+
+        <h2 align="center">About </h2>
+        <aside>
+            <picture>
+                <img usemap="#kvns"
+                     src="assets/img/my_about_img.png"
+                     alt="my image"
+                     style="width: 20% ">
+            </picture>
+
+        </aside>
+        <article style="background-color: #cbcbcb;">
+            <p>
+                Welcome to my portfolio website! My name is K. Vimukthi Nirmana Sanketh.
+                I'm software developer. currently studying at IJSE. I have a strong passion for technology and
+                am constantly seeking new opportunities to develop my skills.
+            </p>
+            <p>
+                As a software developer, I have experience in various areas such as UI/UX design, web development,
+                software development. I am always excited to learn new things and improve my abilities in these fields.
+            </p>
         </article>
-        <aside></aside>
+
     </section>
 
     <section>
+        <!--     ---------------------------- skills  experience education ---------------------- -->
+
         <section id="skill">
             <article>
-                <h3>skill</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat earum
-                    <br>
-                    labore quisquam commodi, voluptates dicta dolorem doloribus, <br>
-                    quod est magnam nulla ducimus explicabo eius error at culpa.
+                <h3>skills</h3>
+                <label>my skills</label>
+                <p>I am a skilled software developer with expertise in Java, MySQL, JavaFX, HTML and CSS.<br>
+                    I specialize in developing software applications that are efficient, user-friendly, and
+                    scalable.<br>
+                    Below is a brief overview of my skills and experiences:
                 </p>
             </article>
         </section>
@@ -94,6 +105,7 @@
         <section>
             <article>
                 <h3>experience</h3>
+                <label>my experience</label>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat earum
                     <br>
                     labore quisquam commodi, voluptates dicta dolorem doloribus, <br>
@@ -106,53 +118,57 @@
         <section>
             <article>
                 <h3>education</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat earum
-                    <br>
-                    labore quisquam commodi, voluptates dicta dolorem doloribus, <br>
-                    quod est magnam nulla ducimus explicabo eius error at culpa.
-                </p>
+                <label>my education</label>
+                <ul>
+                    <li><p>2017 G.C.E O/L</p></li>
+                    <li><p>2020 G.C.E A/L</p></li>
+                    <li><p>2022 ijse (institute of software engineering )</p></li>
+                </ul>
                 <p></p>
             </article>
         </section>
 
     </section>
+
+<!--  -------------------------    my services page -----------------------  -->
     <section id="sevices">
         <h2 align="center">Sevices</h2>
     </section>
 
 
     <section>
+
         <article>
             <h4>ui/ux design</h4>
-            <img src="assets/img/th.jpg">
+            <picture><img src="assets/img/th.jpg"></picture>
         </article>
     </section>
 
     <section>
         <article>
             <h4>web design</h4>
-            <img src="assets/img/th%20(2).jpg">
+            <picture><img src="assets/img/th%20(2).jpg"></picture>
         </article>
     </section>
 
     <section>
         <article>
             <h4>app design</h4>
-            <img src="assets/img/th%20(1).jpg">
+            <picture><img src="assets/img/th%20(1).jpg"></picture>
         </article>
     </section>
 
     <section>
         <article>
             <h4>software design</h4>
-            <img src="assets/img/th%20(23).jpg">
+            <picture><img src="assets/img/th%20(23).jpg"></picture>
         </article>
     </section>
     <section>
 
     </section>
 
-
+<!-- --------------------------------my project page---------------- -->
     <section id="project">
         <article>
             <h2 align="center">project</h2>
@@ -165,20 +181,18 @@
     </section>
     <hr>
 
+<!--    -------------- contact page ------------------------->
     <section id="contact">
-
         <article>
-
-            <a href="tel:0768679867">phone number</a><br>
-            <a href="mailto:vimukthinirmana64@gmail.com">Gmail </a>
+            <h2 align="center">contact</h2>
 
         </article>
         <br>
 
-        <form>
+        <form style="background-color: #cbcbcb">
             <fieldset>
                 <legend>Contact page</legend>
-                <label for="name">name</label>
+                <label for="name">Name</label>
                 <input type="text" id="name">
                 <br>
                 <label for="email">Email</label>
@@ -193,6 +207,18 @@
             </fieldset>
 
         </form>
+        <address>
+
+                <a href="tel:0768679867">phone number</a>
+                <a href="mailto:vimukthinirmana64@gmail.com">Gmail </a>
+                <a href="https://whatsapp.com/web">whatsapp </a>
+                <a href="https://linkdin.com/myprofile">linkdin</a>
+            <br>
+            <label>fallow me</label>
+
+        </address>
+        <br>
+
     </section>
 
 
@@ -200,8 +226,11 @@
 
 <!-- ------------------------------------ footer -------------------------------------- -->
 
-<footer>
-    <address></address>
+<footer style="background-color: #1c1c1c;">
+    <address>
+        <p style="background-color: #1c1c1c;color: #cbcbcb;text-align: center">Copyright @2023 vimukthi nirmana All
+            rights reserved.</p>
+    </address>
 </footer>
 
 </body>
