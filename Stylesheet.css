@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ffffff;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    /*background-size: cover;*/
+    /*background-position: center;*/
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-left: 54%;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 18px;
+}
+
+nav ul li a {
+    color: #1c1c1c;
+    text-decoration: none;
+    font-size: 15px;
+    position: relative;
+    font-style: revert;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: blueviolet;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.4s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+#portfolio_name {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Alaska;
+    color: blueviolet;
+    font-size: 25px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+/*.home-page img{*/
+/*    position: absolute;*/
+/*    right: 30px;*/
+/*    top: 55px;*/
+/*    max-width: 30%;*/
+/*}*/
+
+/*.header-text{*/
+/*    position: absolute;*/
+/*    color: #1c1c1c;*/
+/*    margin-top: 60%;*/
+/*    font-size: 30px;*/
+
+/*}*/
+/*.header-text h1{*/
+/*    font-size: 60px;*/
+/*    margin-top: 20px;*/
+
+/*}*/
+/*.header-text h2{*/
+/*    color: #1c1c1c;*/
+/*    font-size: 50px;*/
+/*    margin-top: -20px;*/
+
+/*}*/
+/*.header-text h1 span{*/
+/*    color:blueviolet;*/
+/*}*/
+
+.home-page {
+    padding: 0px 0;
+}
+
+.home-page .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-page aside {
+    flex: 10px;
+    text-align: center;
+}
+
+.home-page aside img {
+    width: 50%;
+    max-width: 400px;
+}
+
+.home-page .heder-text {
+    flex: 1;
+    text-align: center;
+}
+
+.home-page h1 {
+    font-size: 50px;
+    margin: 0;
+    color: blueviolet;
+}
+
+.home-page h2 {
+    font-size: 35px;
+    margin: 0;
+    color: #999;
+}
+
+.home-page button {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}

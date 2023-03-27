@@ -14,55 +14,57 @@
     <meta name="viewport" content="width=device-width initial-scale=1 user-scalable=no">
     <link rel="canonical" href="http://ijse.lk">
     <link href="assets/icon/Portfolio%20(1).png" rel="potrfolio_icon">
-
+    <link rel="stylesheet" href="Stylesheet.css">
 </head>
 
 <body>
 <!--Sectioning root-->
 
 <!-- --------------------------------- header -------------------------------------- -->
-<header>
-
-    <h1 style="color: blueviolet; text-align: left; font-family: Alaska">portfolio</h1>
+<header id="header">
 
     <nav>
-        <menu style="text-align: right;  ">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skill">Skill</a>
-            <a href="#servise">Servise</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+        <menu>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skill">Skills</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#galary">Gallery</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
         </menu>
 
     </nav>
+
+    <h1 id="portfolio_name">portfolio</h1>
 </header>
 <br>
 
 <!-- --------------------------------- main -------------------------------------- -->
 
 <main>
-    <section>
-        <div>
-            <!--           my home page-->
+    <section><!--           my home page-->
+        <div class="home-page">
+            <div class="container">
+                <div class="heder-text">
 
-            <aside>
-                <img src="assets/img/myImage1.png" style="width: 30% ">
-            </aside>
+                    <h1> Hi,I'm <span>Vimukthi Nirmana</span></h1> <br>
+                    <h2> Font-end Developer</h2><br>
+                    <button>Hire me</button>
 
-            <article>
-
-                <label style="font-size: 30px">Hi,I'm</label><br>
-                <label style="font-size: 60px">Vimukthi Nirmana</label><br>
-                <label style="font-size: 35px"> Font-end Developer</label><br>
-                <button>Hire me</button>
-            </article>
+                </div>
+                <aside>
+                    <img src="assets/img/myImage1.png" alt="myHome page Image">
+                </aside>
+            </div>
         </div>
-
 
     </section>
 
-<hr>
+    <hr>
     <section id="about">
         <div>
             <!--       about -->
@@ -91,7 +93,7 @@
             </article>
         </div>
     </section>
-<hr>
+    <hr>
     <section>
         <div>
             <!--     ---------------------------- skills  experience education ---------------------- -->
@@ -149,7 +151,7 @@
             </section>
         </div>
     </section>
-<hr>
+    <hr>
     <!--  -------------------------    my services page -----------------------  -->
     <section id="sevices">
         <div>
@@ -240,7 +242,7 @@
 
         </div>
     </section>
-<hr>
+    <hr>
     <!-- --------------------------------my project page---------------- -->
     <section id="project">
         <div>
@@ -251,7 +253,8 @@
                         <ul>
                             <li>Bookshop system</li>
                         </ul>
-                        <img usemap="#bookshop_projectMap" src="assets/img/p1.jpg" alt="Bookshop system image" width="50%">
+                        <img usemap="#bookshop_projectMap" src="assets/img/p1.jpg" alt="Bookshop system image"
+                             width="50%">
                         <map name="bookshop_projectMap">
                             <area target="_blank" shape="default" coords="100,100,50"
                                   href="http://github/vimukthinirmana/repositry/project/BookshopSystem" alt="">
