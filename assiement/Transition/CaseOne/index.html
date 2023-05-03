@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case One</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/fonts-awesome/css/all.min.css">
+    <style>
+        section {
+            position: relative;
+            top: 80px;
+            height: 80vh;
+            display: grid;
+            grid-gap: 10px;
+        }
+        div{
+            position: relative;
+            background: purple;
+            height: 50px;
+            width: 300px;
+            left: -250px;
+            transition: 2s;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        div>p{
+            position: relative;
+            color: white;
+            left: 50px;
+            font-weight: bold;
+        }
+        div>p>i{
+            position: relative;
+            font-size: 22px;
+            left: 135px;
+        }
+        div:nth-child(1):hover{
+            left: 0;
+            transition: 2s;
+        }
+        div:nth-child(2):hover{
+            left: 0;
+            transition: 2s;
+        }
+        div:nth-child(3):hover{
+            left: 0;
+            transition: 2s;
+        }
+        div:nth-child(4):hover{
+            left: 0;
+            transition: 2s;
+        }
+        div:nth-child(5):hover{
+            left: 0;
+            transition: 2s;
+        }
+
+    </style>
+</head>
+<body>
+
+<section>
+    <div>
+        <p>Menu One <i class="fa-solid fa-house" style="color: #ffffff"></i></p>
+    </div>
+    <div>
+        <p>Menu Two <i class="fa-solid fa-user" style="color: #ffffff;"></i></p>
+    </div>
+    <div>
+        <p>Menu Three <i class="fa-solid fa-tag" style="color: #ffffff;" ></i> </p>
+    </div>
+    <div>
+        <p>Menu Four <i class="fa-solid fa-address-book" style="color: #ffffff;"></i></p>
+    </div>
+    <div>
+        <p>Menu Five <i class="fa-solid fa-cart-shopping" style="color: #ffffff"></i></p>
+    </div>
+
+</section>
+
+</body>
+</html>

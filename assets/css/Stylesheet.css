@@ -11,9 +11,10 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70px;
+    height: 60px;
 }
-nav ul {
+
+header nav ul {
     display: flex;
     /*justify-content: flex-end;*/
     align-items: center;
@@ -21,19 +22,22 @@ nav ul {
     padding: 0;
     margin-left: 60%;
 }
-nav ul li {
+
+header nav ul li {
     list-style: none;
     margin: 0 10px;
 }
-nav ul li a {
-    justify-content:space-between;
+
+header nav ul li a {
+    justify-content: space-between;
     font-size: 20px;
     text-decoration: none;
     color: #000;
     position: relative;
     transition: color 0.3s ease;
 }
-nav ul li a::before {
+
+header nav ul li a::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -45,34 +49,38 @@ nav ul li a::before {
     transform: scaleX(0);
     transition: all 0.3s ease-in-out 0s;
 }
-nav ul li a:hover {
+
+header nav ul li a:hover {
     color: blueviolet;
 }
-nav ul li a:hover::before {
+
+header nav ul li a:hover::before {
     visibility: visible;
     transform: scaleX(1);
 }
 
 
-header>h1{
+header > h1 {
     display: flex;
     flex-wrap: wrap;
     font-family: Alaska;
     color: blueviolet;
     font-size: 25px;
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: -5px;
+    left: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .home-page {
     background-color: white;
     padding: 100px 0;
 }
-.home-page img{
+
+.home-page img {
     position: absolute;
     top: 20%;
-    left:55%;
+    left: 55%;
     width: 40%;
     z-index: 0;
 
@@ -88,6 +96,8 @@ header>h1{
 
 .heder-text {
     max-width: 700px;
+    position: absolute;
+    top: 35%;
 }
 
 .heder-text h1 {
@@ -108,8 +118,6 @@ header>h1{
 }
 
 
-
-
 .home-page button {
     padding: 12px 30px;
     border: none;
@@ -124,10 +132,11 @@ header>h1{
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     background-color: #2e2b34;
 }
+
 .home-page aside {
     position: absolute;
-    top: 30%;
-    left:72%;
+    top: 20%;
+    left: 72%;
     transform: translate(-50%, -50%);
     width: 300px;
     height: 50px;
@@ -142,12 +151,13 @@ header>h1{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 120%;
     height: auto;
     z-index: 0;
     transition: all 0.9s ease-in-out;
 
 }
+
 .home-page aside:hover img {
     transform: translateX(-10%);
 }
@@ -156,46 +166,93 @@ header>h1{
     transform: translateX(10%);
 }
 
+/*---------------------------about ----------------------------------------------*/
 
-
-.about-page{
-    padding: 70px 0;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    background-color: #333333;
-    margin-top: 110px;
+#about {
+    background-color: #ffffff;
+    padding: 60px;
+    position: absolute;
+    top: 100vh;
+    /*border: 1px solid black;*/
+    box-shadow: 0 0 20px rgba(28, 28, 28, 0.14);
 }
-.about-page aside{
-    flex: 10px;
+
+/* Styling for about page content */
+.about-page {
+    color: #1c1c1c;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+}
+
+.about-page aside {
+    top: 10px;
+    left: 10px;
+    width: 400px;
+    height: auto;
+    margin-right: 50px;
+    animation-name: slideInLeft;
+    animation-duration: 1s;
 }
 .about-page aside img{
-    width: 300px;
-    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(28, 28, 28);
+    border-radius: 3%;
 }
 
-
-
-
-
-.about-page article{
-    text-align: right;
-    padding: 100px;
-    margin-right: 0;
-    margin-left: 300px;
-    margin-top: -500px;
-}
-.about-page article h2{
-    font-size: 40px;
-    text-align: left;
-    color: aliceblue;
-
-}
-.about-page article p{
-    text-align: left;
-    color: white;
-    font-size: 20px;
-    font-family: Arial;
+.about-page article {
+    padding-top: 0px;
+    margin-top: -185px;
+    animation-name: slideInRight;
+    animation-duration: 1s;
 }
 
+.about-page h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+.about-page p {
+    color:#585858;
+    font-size: 18px;
+    line-height: 1.5;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-10%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(10%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
