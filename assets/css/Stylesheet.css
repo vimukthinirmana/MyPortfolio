@@ -12,6 +12,7 @@ header {
     justify-content: center;
     align-items: center;
     height: 60px;
+    background-color: white;
 }
 
 header nav ul {
@@ -71,10 +72,17 @@ header > h1 {
     left: 10px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
-
+#home{
+    /*border: 1px solid black;*/
+}
 .home-page {
     background-color: white;
-    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    padding: 300px;
+    border: 1px solid black;
 }
 
 .home-page img {
@@ -86,18 +94,19 @@ header > h1 {
 
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+/*.container {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    max-width: 1200px;*/
+/*    margin: 0 auto;*/
+/*}*/
 
 .heder-text {
     max-width: 700px;
     position: absolute;
-    top: 35%;
+    top: 240px;
+    left: 55px;
 }
 
 .heder-text h1 {
@@ -145,9 +154,6 @@ header > h1 {
 }
 
 .home-page aside img {
-    /*max-width: 600px;*/
-    /*width: 100%;*/
-    /*height: auto;*/
     position: absolute;
     top: 0;
     left: 0;
@@ -170,11 +176,10 @@ header > h1 {
 
 #about {
     background-color: #ffffff;
-    padding: 60px;
+    padding: 30px;
     position: absolute;
-    top: 100vh;
-    /*border: 1px solid black;*/
-    box-shadow: 0 0 20px rgba(28, 28, 28, 0.14);
+    border: 1px solid black;
+    /*box-shadow: 0 0 20px rgba(28, 28, 28, 0.14);*/
 }
 
 /* Styling for about page content */
