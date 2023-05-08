@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case Six</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <style>
+
+        section{
+            position: relative;
+            display: flex;
+            height: 100vh;
+            top: 0;
+            background-image: url("assets/img/sky.jpg");
+            overflow: hidden;
+        }
+        #city{
+            position: absolute;
+            display: flex;
+            top: 212px;
+            left: 0;
+            width: 2732px;
+            height: 210px;
+            background-image: url("assets/img/city.png");
+
+            animation: slideAnimation;
+            animation-duration: 5s;
+            animation-delay: 1ms;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+
+        }
+        #city>#road{
+            position: absolute;
+            display: flex;
+            top: 210px;
+            left: 0;
+            width: 2732px;
+            height: 239px;
+            /*background-image: url("assets/img/road.jpg");*/
+
+            animation: slideAnimation;
+            animation-duration: 5s;
+            animation-delay: 1ms;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+        /*    */
+            z-index: 2;
+        }
+        #car{
+            position: absolute;
+            top: 370px;
+            left: 504px;
+            width: 341px;
+            height: 145px;
+            background-size: cover;
+            background-position: center;
+            background-image: url("assets/img/car.png");
+        }
+        #wheel{
+            position: absolute;
+            top: 443px;
+            left: 529px;
+            width: 281px;
+            height: 68px;
+            background-size: cover;
+            background-position: center;
+
+        }
+        #wheel>div:nth-child(1){
+            position: absolute;
+            left: 0px;
+            width: 66px;
+            height: 68px;
+            background-size: cover;
+            background-position: center;
+            background-image: url("assets/img/wheel.png");
+
+            animation: rotateWheels;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+
+            animation-delay: 1s;
+            animation-fill-mode: backwards;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+        #wheel>div:nth-child(2){
+            position: absolute;
+            left: 213px;
+            width: 66px;
+            height: 68px;
+            background-size: cover;
+            background-position: center;
+            background-image: url("assets/img/wheel.png");
+            animation: rotateWheels;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+
+            animation-delay: 1s;
+            animation-fill-mode: backwards;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+        }
+
+        #car:hover{
+            animation-play-state: paused;
+        }
+
+        @keyframes rotateWheels {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes slideAnimation {
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(-1366px);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<section>
+    <div id="city">
+        <div id="road">
+            <img src="assets/img/road.jpg">
+            <img src="assets/img/road.jpg">
+        </div>
+    </div>
+    <div id="car"></div>
+    <div id="wheel">
+        <div></div>
+        <div></div>
+    </div>
+</section>
+</body>
+</html>
