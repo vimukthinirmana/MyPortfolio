@@ -81,6 +81,7 @@ header > h1 {
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
+    /*width: 739px;*/
     padding: 300px;
     border: 1px solid black;
 }
@@ -91,22 +92,19 @@ header > h1 {
     left: 55%;
     width: 40%;
     z-index: 0;
+    animation-name: slideInRight;
+    animation-duration: 1s;
 
 }
-
-/*.container {*/
-/*    display: flex;*/
-/*    justify-content: space-between;*/
-/*    align-items: center;*/
-/*    max-width: 1200px;*/
-/*    margin: 0 auto;*/
-/*}*/
 
 .heder-text {
     max-width: 700px;
     position: absolute;
     top: 240px;
     left: 55px;
+
+    animation-name: slideInLeft;
+    animation-duration: 1s;
 }
 
 .heder-text h1 {
@@ -151,6 +149,7 @@ header > h1 {
     height: 50px;
     background-color: #fff;
     z-index: 1;
+
 }
 
 .home-page aside img {
@@ -179,6 +178,7 @@ header > h1 {
     padding: 30px;
     position: absolute;
     border: 1px solid black;
+    width: 1271px;
     /*box-shadow: 0 0 20px rgba(28, 28, 28, 0.14);*/
 }
 
@@ -189,8 +189,7 @@ header > h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    left: 0;
-    right: 0;
+
 }
 
 .about-page aside {
@@ -199,8 +198,7 @@ header > h1 {
     width: 400px;
     height: auto;
     margin-right: 50px;
-    animation-name: slideInLeft;
-    animation-duration: 1s;
+
 }
 .about-page aside img{
     box-shadow: 0 0 20px rgb(28, 28, 28);
@@ -210,23 +208,20 @@ header > h1 {
 .about-page article {
     padding-top: 0px;
     margin-top: -185px;
-    animation-name: slideInRight;
-    animation-duration: 1s;
+
 }
 
 .about-page h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    animation-name: fadeIn;
-    animation-duration: 2s;
+
 }
 
 .about-page p {
     color:#585858;
     font-size: 18px;
     line-height: 1.5;
-    animation-name: fadeIn;
-    animation-duration: 2s;
+
 }
 
 /* Animations */
@@ -260,4 +255,393 @@ header > h1 {
         opacity: 1;
     }
 }
+
+/*--------------- skills-page ---------------------*/
+
+#skill{
+    background-color: #ffffff;
+    padding: 30px;
+    position: absolute;
+    border: 1px solid black;
+    width: 1271px;
+    height: 600px;
+    top: 200vh;
+
+}
+#skill>img{
+    position: absolute;
+    left: -8px;
+    z-index: 0;
+    width: 600px;
+    height: 662px;
+    top: 0;
+}
+.skill-page{
+    color: #1c1c1c;
+    display: flex;
+    /*flex-direction: row;*/
+    justify-content: center;
+    align-items: center;
+
+}
+
+.tab-titles{
+    display: flex;
+    top: 0;
+    position: absolute;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+    border: 1px solid red;
+    width: 650px;
+    height: 50px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: blueviolet;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 1s;
+
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+#skills-section{
+    position: absolute;
+    border: 1px solid #a11fb2;
+    top: 52px;
+    height: 590px;
+    width: 1290px;
+    left: 20px;
+}
+#skills-section>div>h3{
+    margin: 0;
+    position: absolute;
+    top: 0px;
+    border: 1px solid green;
+    width: 1289px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Arial Rounded MT Bold";
+}
+#skills-section>div>.box-container-skills{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid peru;
+    top: 76px;
+    left: 0;
+    height: 426px;
+    width: 1289px;
+}
+#skills-section>div>.box-container-skills>div{
+    width: 245px;
+    height: 180px;
+    /*background-color: gray;*/
+    margin: 10px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #f8f8f8;
+    border-radius: 20px;
+}
+#skills-section>div>.box-container-skills>div:hover{
+
+    background-color: #ffffff;
+    /*margin: 10px;*/
+    border-bottom: 3px solid #a11fb2;
+    opacity: 1;
+    transition-duration: 0.2s;
+
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    /*background-color: #f8f8f8;*/
+    border-radius: 20px;
+}
+#skills-section>div>.box-container-skills>div>img{
+    background-position: center;
+    background-size: cover;
+    width: 98px;
+    height: 98px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 75px;
+}
+#skills-section>div>.box-container-skills>div>h4{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    top: 60px;
+    color: #535050;
+    font-size: 25px;
+    font-weight: bold;
+}
+#skills-section>div>article{
+    position: absolute;
+    border: 1px solid blue;
+    top: 503px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1289px;
+}
+#skills-section>div>article>p{
+    position: absolute;
+    color: #1c1c1c;
+    display: flex;
+    flex-wrap: wrap;
+    top: 0;
+
+}
+
+#experience-section{
+    position: absolute;
+    border: 1px solid #a11fb2;
+    top: 52px;
+    height: 590px;
+    width: 1290px;
+    left: 20px;
+}
+#experience-section>div>h3{
+    margin: 0;
+    position: absolute;
+    top: 0px;
+    border: 1px solid green;
+    width: 1289px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Arial Rounded MT Bold";
+}
+#experience-section>div>.box-container-experience{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid peru;
+    top: 76px;
+    left: 0;
+    height: 426px;
+    width: 1289px;
+}
+#experience-section>div>.box-container-experience>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 280px;
+    height: 280px;
+    /*background-color: gray;*/
+    margin: 15px;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #f8f8f8;
+
+}
+#experience-section>div>.box-container-experience>div:hover{
+    background-color: #ffffff;
+    /*margin: 10px;*/
+    border-bottom: 3px solid #a11fb2;
+    opacity: 1;
+    transition-duration: 0.5s;
+
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    /*background-color: #f8f8f8;*/
+    border-radius: 20px;
+
+}
+.circular-chart {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    max-height: 250px;
+}
+
+.circle {
+    /*stroke: #535050;*/
+    stroke: #a11fb2;
+    fill: none;
+    stroke-width: 3.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+}
+
+#experience-section>div>.box-container-experience>div:nth-child(1)>.parentage-circle{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #a11fb2;
+    border-radius: 100%;
+}
+#experience-section>div>.box-container-experience>div:nth-child(2)>.parentage-circle{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #a11fb2;
+    border-radius: 100%;
+}
+#experience-section>div>.box-container-experience>div:nth-child(3)>.parentage-circle{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #a11fb2;
+    border-radius: 100%;
+}
+#experience-section>div>.box-container-experience>div:nth-child(4)>.parentage-circle{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border: 1px solid #a11fb2;
+    border-radius: 100%;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+#experience-section>div>.box-container-experience>div>h4{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    top: 60px;
+    color: #535050;
+    font-size: 25px;
+    font-weight: bold;
+}
+#experience-section>div>.box-container-experience>div>span{
+    position: absolute;
+    display: flex;
+    margin-top: 160px;
+    align-items: center;
+    top: 40px;
+    justify-content: center;
+    color: #2e2b34;
+    font-size: 20px;
+    font-weight: bold;
+}
+#experience-section>div>.box-container-experience>div>p{
+    /*position: absolute;*/
+    display: flex;
+    margin-top: 160px;
+    align-items: center;
+    top: 2650px;
+    color: #2e2b34;
+    font-size: 17px;
+    font-weight: lighter;
+}
+
+#education-section{
+    position: absolute;
+    border: 1px solid #a11fb2;
+    top: 52px;
+    height: 590px;
+    width: 1290px;
+    left: 20px;
+}
+#education-section>div>h3{
+    margin: 0;
+    position: absolute;
+    top: 0px;
+    border: 1px solid green;
+    width: 1289px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Arial Rounded MT Bold";
+}
+#education-section>div>.box-container-education{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid peru;
+    top: 76px;
+    left: 0;
+    height: 426px;
+    width: 1289px;
+}
+#education-section>div>.box-container-education>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 350px;
+    height: 220px;
+    /*background-color: gray;*/
+    margin: 15px;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #f8f8f8;
+}
+#education-section>div>.box-container-education>div>span{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 120px;
+    color: #535050;
+    font-size: 25px;
+    font-weight: bold;
+}
+#education-section>div>.box-container-education>div>p{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    /*top: 120px;*/
+    color: #333333;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+
+
+
+
 
