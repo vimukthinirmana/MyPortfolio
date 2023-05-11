@@ -386,6 +386,7 @@
         <div class="gallery-page">
             <h2>My Achievement</h2>
 
+
             <div class="gallery-container">
 
                 <div class="cards">
@@ -420,41 +421,38 @@
     <!--    -------------- contact page ------------------------->
     <section id="contact">
         <div class="contact-page">
-            <h2>Contact</h2>
+            <h2>Contact Us</h2>
+            <h3>Have a Project?</h3>
+            <h5>Thank you for visiting my portfolio website.
+                Feel free to contact me for any inquiries or collaborations.</h5>
+            <img src="assets/img/shape2.png" alt="shape2">
 
-
-            <form style="background-color: #cbcbcb">
+            <form class="contact-form" method="post" action="send-mail.php">
                 <fieldset>
-                    <legend>Contact page</legend>
                     <label for="name">Name</label>
-                    <input type="text" id="name">
+                    <input type="text" id="name"  placeholder="Your Name" name="name" required>
                     <br>
                     <label for="email">Email</label>
-                    <input type="email" id="email">
+                    <input type="email" id="email"  placeholder="Your Email" name="email" required>
                     <br>
                     <label for="message">Message </label><br>
-                    <textarea id="message" rows="5" placeholder="type message"></textarea>
+                    <textarea id="message" rows="5" name="message" placeholder="Type message" required></textarea>
                     <br>
-                    <input type="submit">
-
-
+                    <button type="submit">Send</button>
                 </fieldset>
-
             </form>
-            <address>
 
-                <a href="tel:0768679867">phone number</a>
-                <a href="mailto:vimukthinirmana64@gmail.com">Gmail </a>
-                <a href="https://whatsapp.com/web">whatsapp </a>
-                <a href="https://linkdin.com/myprofile">linkdin</a>
-                <br>
-                <label>fallow me</label>
-
-            </address>
-
-
+<!--            <address>-->
+<!--                <a href="tel:0768679867">Phone Number</a>-->
+<!--                <a href="mailto:vimukthinirmana64@gmail.com">Email</a>-->
+<!--                <a href="https://wa.me/1234567890">WhatsApp</a>-->
+<!--                <a href="https://www.linkedin.com/myprofile">LinkedIn</a>-->
+<!--                <br>-->
+<!--                <label>Follow Me</label>-->
+<!--            </address>-->
         </div>
     </section>
+
 
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
