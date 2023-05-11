@@ -70,6 +70,8 @@
     <section id="about">
         <div class="about-page">
 
+            <img src="assets/img/6.png" alt="shape6" class="about-background">
+
             <aside>
                 <img src="assets/img/my_about_2.png" alt="abut image">
 
@@ -385,7 +387,7 @@
     <section id="gallery">
         <div class="gallery-page">
             <h2>My Achievement</h2>
-
+            <img src="assets/img/shape4.png" alt="shape4">
 
             <div class="gallery-container">
 
@@ -453,33 +455,38 @@
         </div>
     </section>
 
-
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
 </main>
 
 <!-- ------------------------------------ footer -------------------------------------- -->
 
-<footer style="background-color: #1c1c1c;">
+<footer id="footer">
     <address>
-        <p style="background-color: #1c1c1c;color: #cbcbcb;text-align: center">Copyright @2023 vimukthi nirmana All
+        <p>Copyright @2023 vimukthi nirmana All
             rights reserved.</p>
     </address>
 </footer>
 
+
+
+
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
 </body>
 
 </html>

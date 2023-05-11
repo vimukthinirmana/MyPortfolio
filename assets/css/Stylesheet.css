@@ -88,7 +88,7 @@ header > h1 {
     /* width: 739px; */
     /* padding: 300px; */
     height: 600px;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
 .home-page img {
@@ -182,7 +182,7 @@ header > h1 {
     background-color: #ffffff;
     padding: 20px;
     position: absolute;
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     /* max-width: 1331px; */
     width: 1307px;
     height: 640px;
@@ -196,9 +196,18 @@ header > h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
+    background-position: center;
+    background-size: cover;
 }
-
+.about-page>.about-background{
+    position: absolute;
+top: 0;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+    width: 1348px;
+    height: 640px;
+}
 .about-page aside {
     position: absolute;
     display: flex;
@@ -209,7 +218,7 @@ header > h1 {
     width: 350px;
     height: 550px;
 
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 
 }
 
@@ -230,7 +239,7 @@ header > h1 {
     height: 580px;
     /* padding-top: 0px; */
     /* margin-top: -185px; */
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 
 }
 
@@ -303,7 +312,7 @@ header > h1 {
     background-color: #ffffff;
     padding: 30px;
     position: absolute;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     width: 1287px;
     height: 600px;
     top: 203vh;
@@ -336,7 +345,7 @@ header > h1 {
     justify-content: space-between;
     align-content: center;
     flex-wrap: wrap;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     width: 650px;
     height: 50px;
 }
@@ -376,7 +385,7 @@ header > h1 {
 
 #skills-section {
     position: absolute;
-    border: 1px solid #a11fb2;
+    /*border: 1px solid #a11fb2;*/
     top: 52px;
     height: 590px;
     width: 1290px;
@@ -387,7 +396,7 @@ header > h1 {
     margin: 0;
     position: absolute;
     top: 0px;
-    border: 1px solid green;
+    /*border: 1px solid green;*/
     width: 1289px;
     height: 75px;
     display: flex;
@@ -404,7 +413,7 @@ header > h1 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border: 1px solid peru;
+    /*border: 1px solid peru;*/
     top: 76px;
     left: 0;
     height: 426px;
@@ -463,7 +472,7 @@ header > h1 {
 
 #skills-section > div > article {
     position: absolute;
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     top: 503px;
     left: 0;
     display: flex;
@@ -483,7 +492,7 @@ header > h1 {
 
 #experience-section {
     position: absolute;
-    border: 1px solid #a11fb2;
+    /*border: 1px solid #a11fb2;*/
     top: 52px;
     height: 590px;
     width: 1290px;
@@ -494,7 +503,7 @@ header > h1 {
     margin: 0;
     position: absolute;
     top: 0px;
-    border: 1px solid green;
+    /*border: 1px solid green;*/
     width: 1289px;
     height: 75px;
     display: flex;
@@ -511,7 +520,7 @@ header > h1 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border: 1px solid peru;
+    /*border: 1px solid peru;*/
     top: 76px;
     left: 0;
     height: 426px;
@@ -647,7 +656,7 @@ header > h1 {
 
 #education-section {
     position: absolute;
-    border: 1px solid #a11fb2;
+    /*border: 1px solid #a11fb2;*/
     top: 52px;
     height: 590px;
     width: 1290px;
@@ -658,7 +667,7 @@ header > h1 {
     margin: 0;
     position: absolute;
     top: 0px;
-    border: 1px solid green;
+    /*border: 1px solid green;*/
     width: 1289px;
     height: 75px;
     display: flex;
@@ -675,7 +684,7 @@ header > h1 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border: 1px solid peru;
+    /*border: 1px solid peru;*/
     top: 76px;
     left: 0;
     height: 426px;
@@ -774,7 +783,7 @@ header > h1 {
     position: absolute;
     width: 1347px;
     height: 660px;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     display: flex;
     top: 306vh;
     left: 0;
@@ -793,7 +802,7 @@ header > h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     top: -19px;
     width: 260px;
     height: 70px;
@@ -804,7 +813,7 @@ header > h1 {
 }
 
 .box-container-services {
-    border: 1px solid brown;
+    /*border: 1px solid brown;*/
     position: absolute;
     display: flex;
     justify-content: center;
@@ -863,7 +872,7 @@ header > h1 {
     font-weight: bold;
     font-size: 20px;
     font-family: Alaska;
-    border: 1px solid #a11fb2;
+    /*border: 1px solid #a11fb2;*/
     padding: 10px;
     top: 0px;
 }
@@ -877,7 +886,7 @@ header > h1 {
     font-weight: bold;
     font-size: 18px;
     font-family: initial;
-    border: 1px solid #ff253a;
+    /*border: 1px solid #ff253a;*/
     padding: 10px;
     width: 245px;
     height: 360px;
@@ -888,7 +897,7 @@ header > h1 {
     position: absolute;
     width: 1347px;
     height: 660px;
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
     display: flex;
     top: 406vh;
     left: 0;
@@ -908,7 +917,7 @@ header > h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     top: -19px;
     width: 260px;
     height: 70px;
@@ -918,7 +927,7 @@ header > h1 {
 }
 
 .box-container-projects {
-    border: 1px solid #ffbb22;
+    /*border: 1px solid #ffbb22;*/
     position: absolute;
     display: flex;
     justify-content: center;
@@ -959,41 +968,7 @@ header > h1 {
     border-radius: 20px;
 }
 
-/*---------------------------------------------------------------*/
 
-/*.box-container-projects > section>img:hover{*/
-/*    transform: scale(1.1);*/
-/*}*/
-
-/*.box-container-projects>section>h4{*/
-/*    position: relative;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    color: #1c1c1c;*/
-/*    font-weight: bold;*/
-/*    font-size: 20px;*/
-/*    font-family: Alaska;*/
-/*    border: 1px solid #a11fb2;*/
-/*    padding: 10px;*/
-/*    top: 0px;*/
-/*}*/
-/*.box-container-projects>section>p{*/
-/*    position: relative;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    color: #504e4e;*/
-/*    font-weight: bold;*/
-/*    font-size: 18px;*/
-/*    font-family: initial;*/
-/*    border: 1px solid #ff253a;*/
-/*    padding: 10px;*/
-/*    width: 245px;*/
-/*    height: 340px;*/
-/*}*/
-
-/*---------------------------------------------------------------------*/
 
 .layer-project {
 
@@ -1071,8 +1046,8 @@ header > h1 {
 #gallery {
     position: absolute;
     width: 1347px;
-    height: 660px;
-    border: 1px solid red;
+    height: 750px;
+    /*border: 1px solid red;*/
     display: flex;
     top: 506vh;
     left: 0;
@@ -1087,15 +1062,18 @@ header > h1 {
     justify-content: center;
     align-items: center;
 }
-/*.gallery-page>img{*/
-/*    width: 1200px;*/
-/*    height: 600px;*/
-/*    background-size: cover;*/
-/*    background-position: center;*/
-/*}*/
+.gallery-page>img{
+    top: -250px;
+    width: 780px;
+    height: 1312px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    transform: rotate(90deg);
+}
 
 .gallery-container {
-    border: 1px solid #a11fb2;
+    /*border: 1px solid #a11fb2;*/
     position: absolute;
     display: flex;
     justify-content: center;
@@ -1182,7 +1160,7 @@ header > h1 {
     height: 660px;
     border: 1px solid indigo;
     display: flex;
-    top: 606vh;
+    top: 620vh;
     left: 0;
     justify-content: center;
     align-items: center;
@@ -1318,3 +1296,31 @@ address a:hover {
     height: 660px;
 }
 
+
+
+/*----------------------------- footer ------------------------------------*/
+
+#footer{
+    position: absolute;
+    width: 1347px;
+    height: 120px;
+    border: 1px solid indigo;
+    display: flex;
+    top: 720vh;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333333;
+
+}
+#footer>p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;top: 30px;
+
+    font-size: 20px;
+    color: #cbcbcb;
+}
