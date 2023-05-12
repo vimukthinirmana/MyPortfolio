@@ -88,7 +88,7 @@ header > h1 {
     /* width: 739px; */
     /* padding: 300px; */
     height: 600px;
-    /*border: 1px solid black;*/
+    border: 1px solid black;
 }
 
 .home-page img {
@@ -105,12 +105,101 @@ header > h1 {
 .heder-text {
     max-width: 700px;
     position: absolute;
-    top: 240px;
+    top: 210px;
     left: 55px;
 
     animation-name: slideInLeft;
     animation-duration: 1s;
 }
+/*-----------------*/
+.social-card {
+    top: 230px;
+    left: -14px;
+    /*border: 1px solid black;*/
+    display: flex;
+    height: 60px;
+    width: 240px;
+    position: absolute;
+}
+
+.social-card svg {
+    position: absolute;
+    display: flex;
+    width: 60%;
+    height: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    opacity: 1;
+    transition: opacity 0.25s;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.social-card .social-link1,.social-card .social-link2,.social-card .social-link3,.social-card .social-link4 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    color: whitesmoke;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.25s;
+    border-radius: 50px;
+}
+
+.social-card svg {
+    transform: scale(1);
+}
+
+.social-card .social-link1:hover svg path {
+    fill: white;
+}
+.social-card .social-link1:hover{
+    background-color: #0A66C2;
+    animation: bounce_613 0.4s linear;
+}
+.social-card .social-link2:hover svg path{
+    fill: white;
+}
+.social-card .social-link2:hover {
+    background-color: #000000;
+    animation: bounce_613 0.4s linear;
+}
+
+.social-card .social-link3:hover svg path{
+    fill: white;
+}
+.social-card .social-link3:hover {
+    background-color: #5865f2;
+    animation: bounce_613 0.4s linear;
+}
+.social-card .social-link4:hover svg path{
+    fill: white;
+}
+.social-card .social-link4:hover {
+    background-color: #12a50b;
+    animation: bounce_613 0.4s linear;
+}
+
+@keyframes bounce_613 {
+    40% {
+        transform: scale(1.4);
+    }
+
+    60% {
+        transform: scale(0.8);
+    }
+
+    80% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+/*-----------*/
 
 .heder-text h1 {
     font-size: 50px;
@@ -1090,7 +1179,7 @@ top: 0;
     justify-content: center;
     align-items: center;
     border: 1px solid black;
-    top: -19px;
+    top: -32px;
     width: 320px;
     height: 70px;
     color: #605f5f;
@@ -1149,6 +1238,7 @@ top: 0;
     z-index: 4;
     transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) !important;
     transition: all .5s ease-out;
+    cursor: pointer;
 }
 
 
