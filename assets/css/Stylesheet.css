@@ -57,8 +57,8 @@ header nav ul li a:hover {
 }
 
 header nav ul li a:hover::before {
-    visibility: visible;
-    transform: scaleX(1);
+    /*visibility: visible;*/
+    /*transform: scaleX(1);*/
 }
 
 
@@ -84,11 +84,9 @@ header > h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1338px;
-    /* width: 739px; */
-    /* padding: 300px; */
+    max-width: 100%;
     height: 600px;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 
 .home-page img {
@@ -212,12 +210,15 @@ header > h1 {
     color: blueviolet;
 }
 
-.heder-text h2 {
-    font-size: 28px;
-    margin: 20px 0 40px;
+.multiText{
+    width: 500px;
+    height: 30px;
+    font-size: 32px;
+    margin: 20px 0 20px;
     color: #333333;
-}
+    font-weight: bold;
 
+}
 
 .home-page button {
     padding: 12px 30px;
@@ -225,8 +226,10 @@ header > h1 {
     background-color: blueviolet;
     color: #fff;
     font-size: 18px;
-    border-radius: 30px;
+    border-radius: 22px;
     cursor: pointer;
+    left: -9px;
+    position: relative;
 }
 
 .home-page button:hover {
@@ -235,35 +238,44 @@ header > h1 {
 }
 
 .home-page aside {
+    /*border: 1px solid blue;*/
     position: absolute;
-    top: 20%;
+    top: 323px;
     left: 72%;
     transform: translate(-50%, -50%);
-    width: 300px;
-    height: 50px;
-    background-color: #fff;
+    width: 420px;
+    height: 530px;
     z-index: 1;
+    overflow: hidden;
+    padding: 12px;
 
 }
 
 .home-page aside img {
     position: absolute;
-    top: 0;
+    padding-top: 42px;
+    top: 0px;
     left: 0;
-    width: 120%;
+    width: 100%;
     height: auto;
     z-index: 0;
-    transition: all 0.9s ease-in-out;
-
+    /* transition: all 0.9s ease-in-out; */
+    animation: animateOwner 5s linear infinite;
+}
+@keyframes animateOwner {
+    50%{
+        left: 20px;
+        top: -20px;
+    }
 }
 
-.home-page aside:hover img {
-    transform: translateX(-10%);
-}
+/*.home-page aside:hover img {*/
+/*    transform: translateX(-10%);*/
+/*}*/
 
-.home-page aside:hover img:hover {
-    transform: translateX(10%);
-}
+/*.home-page aside:hover img:hover {*/
+/*    transform: translateX(10%);*/
+/*}*/
 
 /*---------------------------about ----------------------------------------------*/
 
@@ -326,9 +338,6 @@ top: 0;
     top: 52px;
     width: 900px;
     height: 580px;
-    /* padding-top: 0px; */
-    /* margin-top: -185px; */
-    /*border: 1px solid black;*/
 
 }
 
@@ -512,7 +521,7 @@ top: 0;
 #skills-section > div > .box-container-skills > div {
     width: 245px;
     height: 180px;
-    /*background-color: gray;*/
+    background-color: gray;
     margin: 10px;
 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -638,10 +647,7 @@ top: 0;
     opacity: 1;
     transition-duration: 0.5s;
 
-    /*background-color: #f8f8f8;*/
     border-radius: 20px;
-
-
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 
 }
@@ -654,7 +660,6 @@ top: 0;
 }
 
 .circle {
-    /*stroke: #535050;*/
     stroke: #a11fb2;
     fill: none;
     stroke-width: 3.8;
@@ -1129,8 +1134,116 @@ top: 0;
     height: 100%;
 }
 
+/*------------------------------------------ assignment page ------------------------------------------*/
 
-/*-------------- gallery page -----------------------*/
+#assignment{
+    position: absolute;
+    width: 1347px;
+    height: 660px;
+    /*border: 1px solid #ff253a;*/
+    display: flex;
+    top: 506vh;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+}
+.assignment-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.assignment-page>h2{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border: 1px solid black;*/
+    top: -19px;
+    width: 312px;
+    height: 70px;
+    color: #605f5f;
+    font-weight: bold;
+    font-size: 40px;
+}
+.assignment-container{
+    /*border: 1px solid #a11fb2;*/
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    top: 90px;
+    width: 1190px;
+    height: 552px;
+}
+.assignment-card {
+    top: 20px;
+    margin: 15px;
+    width: 250px;
+    height: 190px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.212);
+    background: #fff;
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    position: relative;
+    transition: all .4s;
+}
+
+.assignment-card > div {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
+    cursor: pointer;
+    z-index: 10;
+    transition: all .4s;
+    background-color: #fff;
+}
+.assignment-card > div>img{
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.assignment-card>p{
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    font-family: 'poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 95px;
+}
+.assignment-card>a{
+    display: inline-block;
+    justify-content: center;
+    position: absolute;
+    bottom: 9px;
+    width: 40px;
+    height: 40px;
+    font-size: 32px;
+
+}
+
+.assignment-card:hover div {
+    transform: translateY(-50px);
+    border-radius: 10px;
+    width: 80%;
+    height: 80%;
+}
+.assignment-card:hover div>img{
+    border-radius: 10px;
+}
+
+
+
+/*------------------------------------------------------- gallery page -----------------------------*/
 
 #gallery {
     position: absolute;
@@ -1138,7 +1251,7 @@ top: 0;
     height: 750px;
     /*border: 1px solid red;*/
     display: flex;
-    top: 506vh;
+    top: 606vh;
     left: 0;
     justify-content: center;
     align-items: center;
@@ -1151,15 +1264,7 @@ top: 0;
     justify-content: center;
     align-items: center;
 }
-.gallery-page>img{
-    top: -250px;
-    width: 780px;
-    height: 1312px;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    transform: rotate(90deg);
-}
+
 
 .gallery-container {
     /*border: 1px solid #a11fb2;*/
@@ -1178,7 +1283,7 @@ top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     top: -32px;
     width: 320px;
     height: 70px;
@@ -1248,9 +1353,9 @@ top: 0;
     position: absolute;
     width: 1347px;
     height: 660px;
-    border: 1px solid indigo;
+    /*border: 1px solid indigo;*/
     display: flex;
-    top: 620vh;
+    top: 720vh;
     left: 0;
     justify-content: center;
     align-items: center;
@@ -1394,9 +1499,9 @@ address a:hover {
     position: absolute;
     width: 1347px;
     height: 120px;
-    border: 1px solid indigo;
+    /*border: 1px solid indigo;*/
     display: flex;
-    top: 720vh;
+    top: 820vh;
     left: 0;
 
     display: flex;
