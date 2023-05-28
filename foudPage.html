@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>page-404</title>
-    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
     <style>
         .page_404 {
             padding: 40px 0;
@@ -98,7 +98,53 @@
             width: 102px;
             height: 32px;
         }
+    /*----------------------------------------------------------------------*/
+        /* Responsive Styles */
 
+        @media (max-width: 768px) {
+            .container {
+                height: auto;
+                flex-direction: column;
+                align-items: center;
+            }
+            .container > h1 {
+                font-size: 64px;
+            }
+            .content_box_404 {
+                width: 90%;
+                height: auto;
+                margin: 20px 0;
+            }
+            .content_box_404 > img {
+                width: 100%;
+                height: auto;
+            }
+            .content {
+                top: 280px;
+                width: 90%;
+            }
+            .content h3 {
+                font-size: 36px;
+                top: -48px;
+            }
+            .content p {
+                font-size: 16px;
+                top: 25px;
+            }
+            .button {
+                top: 105px;
+                width: 120px;
+                height: 40px;
+            }
+            .button a {
+                font-size: 14px;
+            }
+            .button:hover {
+                width: 122px;
+                height: 42px;
+            }
+        }
+    /*    ---------------------------------------------------------------*/
 
     </style>
 </head>
@@ -107,12 +153,12 @@
     <div class="container">
         <h1>404</h1>
         <div class="content_box_404">
-            <img src="funny-404-error-page-design.gif" alt="gif">
+            <img src="assets/gif/funny-404-error-page-design.gif" alt="gif">
         </div>
         <div class="content">
             <h3>Look like you're lost</h3>
             <p>The page you are looking for not available!</p>
-            <div class="button"><a href="#">Go to Home</a></div>
+            <div class="button"><a href="index.html">Go to Home</a></div>
         </div>
     </div>
 

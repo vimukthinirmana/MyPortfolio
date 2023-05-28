@@ -89,7 +89,7 @@ header > h1 {
     /*border: 1px solid black;*/
 }
 
-.home-background-image{
+.home-background-image {
     /*border: 1px solid darkred;*/
     position: absolute;
     top: 0px;
@@ -103,7 +103,7 @@ header > h1 {
     overflow: hidden;
 }
 
-.home-background-image>img {
+.home-background-image > img {
     background-position: center;
     background-size: cover;
     left: -263px;
@@ -253,7 +253,8 @@ header > h1 {
     position: relative;
 
 }
-.home-page button>a{
+
+.home-page button > a {
     text-decoration: none;
     color: #fff;
 }
@@ -1017,7 +1018,7 @@ header > h1 {
 #project {
     position: absolute;
     width: 1347px;
-    height: 660px;
+    height: 620px;
     /*border: 1px solid blue;*/
     display: flex;
     top: 406vh;
@@ -1039,12 +1040,51 @@ header > h1 {
     justify-content: center;
     align-items: center;
     /*border: 1px solid black;*/
-    top: -19px;
+    top: -12px;
     width: 260px;
     height: 70px;
     color: #605f5f;
     font-weight: bold;
     font-size: 40px;
+}
+
+
+.project-page >button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 485px;
+    padding: 17px 40px;
+    border-radius: 50px;
+    border: 0;
+    background-color: #2e2b34;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+    transition: all .5s ease;
+}
+.project-page >button>a{
+    color: white;
+    text-decoration: none;
+}
+
+.project-page >button:hover {
+    letter-spacing: 3px;
+    background-color:blueviolet;
+    color: hsl(0, 0%, 100%);
+    box-shadow: blueviolet 0px 7px 29px 0px;
+}
+.project-page >button:hover a{
+    color: white;
+}
+
+.project-page >button:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
 }
 
 .box-container-projects {
@@ -1054,12 +1094,13 @@ header > h1 {
     justify-content: center;
     align-items: center;
     width: 1260px;
-    height: 530px;
+    height: 372px;
     background: white;
     top: 100px;
 }
 
 .box-container-projects > section {
+    /*border: 1px solid blue;*/
     background-size: cover;
     background-position: center;
     position: relative;
@@ -1069,33 +1110,41 @@ header > h1 {
     justify-content: center;
     /*background: #ffffff;*/
     width: 286px;
-    height: 495px;
-    border-radius: 20px;
+    height: 215px;
+    border-radius: 15px;
     margin: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 
 }
 
 .box-container-projects > section:hover {
-    transform: translateY(-10px);
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+.box-container-projects > section:hover  img{
+    transform: scale(1.1);
+    transition-duration: 0.5s;
 }
 
 .box-container-projects > section > img {
     width: 286px;
-    height: 495px;
+    height: 215px;
     background-size: cover;
     background-position: center;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 
 .layer-project {
-
     width: 206px;
     height: 0px;
-    background: linear-gradient(rgb(213 211 211 / 60%), #db03f787);
-    border-radius: 20px;
+    /*background: linear-gradient(to bottom, rgba(213, 211, 211, 0.6), rgba(219, 3, 247, 0.53));*/
+    /*background-blur: 10px;*/
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border-radius: 15px;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -1112,35 +1161,35 @@ header > h1 {
 }
 
 .layer-project > h4 {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: #1c1c1c;
+    align-items: flex-start;
+    color: #ffffff;
     font-weight: bold;
     font-size: 20px;
     font-family: Alaska;
     /*border: 1px solid #a11fb2;*/
-    padding: 10px;
     top: 0px;
 }
 
 .layer-project > p {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #504e4e;
+    color: #fcfcfd;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 14px;
     font-family: initial;
     /*border: 1px solid #ff253a;*/
     padding: 10px;
-    width: 245px;
-    /*height: 340px;*/
+    width: 252px;
 }
 
 .layer-project > a {
+    position: absolute;
+    top: 125px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1160,6 +1209,7 @@ header > h1 {
     height: 100%;
 }
 
+
 /*------------------------------------------ assignment page ------------------------------------------*/
 
 #assignment {
@@ -1168,7 +1218,7 @@ header > h1 {
     height: 660px;
     /*border: 1px solid #ff253a;*/
     display: flex;
-    top: 506vh;
+    top: 500vh;
     left: 0;
     justify-content: center;
     align-items: center;
@@ -1484,13 +1534,14 @@ header > h1 {
 }
 
 .contact-form button[type="submit"] {
-    background-color: #ada9a9;
+    background-color: #333333;
     color: #fff;
     padding: 10px 25px;
     border: none;
     border-radius: 20px;
     font-size: 20px;
     cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .contact-form button[type="submit"]:hover {
@@ -1524,6 +1575,39 @@ address a:hover {
     width: 1347px;
     height: 660px;
 }
+/*------------------------ scrool button ------------------ */
+#scrollButton {
+    position: fixed;
+    bottom: 10px;
+    width: 40px;
+    height: 40px;
+    right: 10px;
+    padding: 10px;
+    background-color: #333;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#scrollButton > i {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+#scrollButton:hover {
+    background-color: #555;
+}
+
 
 
 /*----------------------------- footer ------------------------------------*/

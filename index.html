@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/fonts-awesome/css/all.min.css">
 
 
+
 </head>
 
 <body>
@@ -162,8 +163,8 @@
                         <div><h4>Html</h4>
                             <img src="assets/icon/html-5.png" alt="html icon">
                             <p></p></div>
-                        <div><h4>C#</h4>
-                            <img src="assets/icon/c-sharp.png" alt="cshrp icon">
+                        <div><h4>Bootstrap</h4>
+                            <img src="assets/icon/bootstrapIcon.png" alt="Bootstrap icon">
                             <p></p></div>
                     </div>
 
@@ -367,6 +368,8 @@
     <section id="project">
         <div class="project-page">
             <h2 align="center">projects</h2>
+            <button> <a href="foudPage.html">See more</a></button>
+
             <div class="box-container-projects">
 
                 <section>
@@ -380,6 +383,17 @@
                 </section>
 
                 <section>
+                    <img src="assets/img/blueOcenHotel.jpg" alt="pet">
+                    <div class="layer-project">
+                        <h4>Hotel pos System UI </h4>
+
+                        <p>The system for BlueOcenHotel pos System UI.
+                            java,javafx,css language use it.</p>
+                        <a href="foudPage.html"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </section>
+
+                <section>
                     <img src="assets/img/hostel.jpg" alt="hostel">
                     <div class="layer-project">
                         <h4>Hostel pos System </h4>
@@ -389,16 +403,7 @@
                     </div>
                 </section>
 
-                <section>
-                    <img src="assets/img/pet.jpg" alt="pet">
-                    <div class="layer-project">
-                        <h4>Pet Adoption pos System </h4>
 
-                        <p>The system for manage your Pet Adoption pos in pet ,employe ,customer & orders.
-                            java,javafx,css,mysql language use it.</p>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </section>
 
                 <section>
                     <img src="assets/img/connect-four-game.jpeg" alt="connect-four-game">
@@ -501,7 +506,7 @@
 
         </div>
     </section>
-    <hr>
+
 
 
     <!--    -------------- contact page ------------------------->
@@ -538,6 +543,10 @@
             <!--            </address>-->
         </div>
     </section>
+    <button id="scrollButton" onclick="scrollToTop()">
+        <i class="fas fa-chevron-up fa-bounce"></i>
+    </button>
+
 
 </main>
 
@@ -583,6 +592,26 @@
         document.getElementById(tabname).classList.add("active-tab");
     }
 </script>
+
+<script>
+    window.addEventListener('scroll', toggleScrollButton);
+
+    function toggleScrollButton() {
+        var scrollButton = document.getElementById('scrollButton');
+        if (window.pageYOffset > 0) {
+            scrollButton.style.display = 'block'; // Show the button when scrolling down
+        } else {
+            scrollButton.style.display = 'none'; // Hide the button when at the top
+        }
+    }
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+
+</script>
+
 </body>
 
 </html>
