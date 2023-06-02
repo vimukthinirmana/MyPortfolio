@@ -17,16 +17,16 @@
             </button>
             <div class="collapse navbar-collapse ms-4" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item" >
+                    <li class="nav-item">
                         <a id="nav-Customers" class="nav-link text-white" aria-current="page" href="#customer-section">Customer</a>
                     </li>
-                    <li class="nav-item" >
+                    <li class="nav-item">
                         <a id="nav-Items" class="nav-link text-white" href="#item-section">Items</a>
                     </li>
-                    <li class="nav-item" >
+                    <li class="nav-item">
                         <a id="nav-Orders" class="nav-link text-white" href="#order-section">Orders</a>
                     </li>
-                    <li class="nav-item" >
+                    <li class="nav-item">
                         <a id="nav-PlaceOrders" class="nav-link text-white" href="#placeOrder-section">Place Orders</a>
                     </li>
 
@@ -42,7 +42,7 @@
 </header>
 <body>
 <section>
-    <main id="customer-section" >
+    <main id="customer-section">
         <section class="p-3 mb-2 bg-primary-subtle text-emphasis-primary">
 
             <section class="row p-4 m-0 object-fit-contain col-12" id="customer">
@@ -51,26 +51,25 @@
                     <h5 class="text-dark text-center m-lg-3 pt-5">Add Customer</h5>
                     <form class="row g-3">
                         <div class="col-md-6">
-                            <label for="txtId" class="form-label">ID</label>
-                            <input type="id" class="form-control" id="txtId">
+                            <label for="txtCustomerId" >ID</label>
+                            <input type="text" class="form-control" id="txtCustomerId">
                         </div>
                         <div class="col-md-6">
-                            <label for="txtName" class="form-label">Name</label>
-                            <input type="name" class="form-control" id="txtName">
+                            <label for="txtCustomerName" >Name</label>
+                            <input type="text" class="form-control" id="txtCustomerName">
                         </div>
                         <div class="col-md-6">
-                            <label for="txtAddress" class="form-label">Address</label>
-                            <input type="address" class="form-control" id="txtAddress">
+                            <label for="txtCustomerAddress" >Address</label>
+                            <input type="text" class="form-control" id="txtCustomerAddress">
                         </div>
                         <div class="col-md-6">
-                            <label for="txtContact" class="form-label">Contact</label>
-                            <input type="contact" class="form-control" id="txtContact">
+                            <label for="txtCustomerContact" >Contact</label>
+                            <input type="text" class="form-control" id="txtCustomerContact">
                         </div>
-
 
 
                         <div class="col-10">
-                            <button type="submit" class="btn btn-primary" id="saveBtn">Save</button>
+                            <button class="btn btn-primary" id="saveCusBtn">Save</button>
                         </div>
                     </form>
 
@@ -78,59 +77,18 @@
                 <section class="col border-dark m-3 border rounded object-fit-contain col-12">
                     <h5 class="text-dark text-center m-lg-3 pb-3">Customer Details</h5>
                     <table class="table table-light table-striped">
-                        <thead>
+                        <thead class="bg-danger text-white">
                         <tr>
                             <th style="background-color: #0d6efd" scope="col">Id</th>
                             <th style="background-color: #0d6efd" scope="col">Name</th>
                             <th style="background-color: #0d6efd" scope="col">Address</th>
                             <th style="background-color: #0d6efd" scope="col">Contact</th>
-                            <th style="background-color: #0d6efd" scope="col">Action</th>
+
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr id="details">
-                            <th scope="row">C001</th>
-                            <td>Janaka</td>
-                            <td>Matara</td>
-                            <td>0777890789</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">C002</th>
-                            <td>Yasith</td>
-                            <td>Galle</td>
-                            <td>0724580098</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">C003</th>
-                            <td>Nimal</td>
-                            <td>Galle</td>
-                            <td>0774523123</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">C004</th>
-                            <td>Kasun</td>
-                            <td>Galle</td>
-                            <td>0776786456</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-
-
+                        <tbody id="tblCustomer">
                         </tbody>
+
                     </table>
                 </section>
             </section>
@@ -483,71 +441,77 @@
 
 </section>
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-
-
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/code.jquery.com_jquery-3.7.0.min.js"></script>
 
 <script>
 
     document.getElementById("customer-section");
-    document.getElementById("item-section").style.display="none";
-    document.getElementById("order-section").style.display="none";
-    document.getElementById("placeOrder-section").style.display="none";
+    document.getElementById("item-section").style.display = "none";
+    document.getElementById("order-section").style.display = "none";
+    document.getElementById("placeOrder-section").style.display = "none";
 
 
-    document.getElementById("nav-Customers").addEventListener("click" ,function (){
-        document.getElementById("customer-section").style.display="block";
-        document.getElementById("item-section").style.display="none";
-        document.getElementById("order-section").style.display="none";
-        document.getElementById("placeOrder-section").style.display="none";
+    document.getElementById("nav-Customers").addEventListener("click", function () {
+        document.getElementById("customer-section").style.display = "block";
+        document.getElementById("item-section").style.display = "none";
+        document.getElementById("order-section").style.display = "none";
+        document.getElementById("placeOrder-section").style.display = "none";
     });
 
-    document.getElementById("nav-Items").addEventListener("click" ,function (){
-        document.getElementById("customer-section").style.display="none";
-        document.getElementById("item-section").style.display="block";
-        document.getElementById("order-section").style.display="none";
-        document.getElementById("placeOrder-section").style.display="none";
+    document.getElementById("nav-Items").addEventListener("click", function () {
+        document.getElementById("customer-section").style.display = "none";
+        document.getElementById("item-section").style.display = "block";
+        document.getElementById("order-section").style.display = "none";
+        document.getElementById("placeOrder-section").style.display = "none";
     });
 
-    document.getElementById("nav-Orders").addEventListener("click" ,function (){
-        document.getElementById("customer-section").style.display="none";
-        document.getElementById("item-section").style.display="none";
-        document.getElementById("order-section").style.display="block";
-        document.getElementById("placeOrder-section").style.display="none";
+    document.getElementById("nav-Orders").addEventListener("click", function () {
+        document.getElementById("customer-section").style.display = "none";
+        document.getElementById("item-section").style.display = "none";
+        document.getElementById("order-section").style.display = "block";
+        document.getElementById("placeOrder-section").style.display = "none";
     });
 
-    document.getElementById("nav-PlaceOrders").addEventListener("click" ,function (){
-        document.getElementById("customer-section").style.display="none";
-        document.getElementById("item-section").style.display="none";
-        document.getElementById("order-section").style.display="none";
-        document.getElementById("placeOrder-section").style.display="block";
+    document.getElementById("nav-PlaceOrders").addEventListener("click", function () {
+        document.getElementById("customer-section").style.display = "none";
+        document.getElementById("item-section").style.display = "none";
+        document.getElementById("order-section").style.display = "none";
+        document.getElementById("placeOrder-section").style.display = "block";
     });
 
 </script>
 
 <script>
-document.getElementById("saveBtn").addEventListener("click",function () {
-    let txtValueId = document.getElementById("txtId").value;
-    let txtValueName = document.getElementById("txtName").value;
-    let txtValueAddress = document.getElementById("txtAddress").value;
-    let txtValueContact = document.getElementById("txtContact").value;
+    document.getElementById("saveCusBtn").addEventListener("click", function () {
+        let id = document.getElementById("txtCustomerId").value;
+        let name = document.getElementById("txtCustomerName").value;
+        let address = document.getElementById("txtCustomerAddress").value;
+        let contact = document.getElementById("txtCustomerContact").value;
 
-   let tr = document.createElement("tr");
-    let col1 = document.createElement("td");
-    let col2 = document.createElement("td");
-    let col3 = document.createElement("td");
+        console.log(id,name,address,contact);
 
-    col1.textContent=id;
-    col2.textContent=name;
-    col3.textContent=address;
-    col4.textContent=contact;
+        let tBody = document.getElementById("tblCustomer");
 
+        let tr = document.createElement("tr");
 
-    tr.appendChild(value);
+        //create column
+        let col1 = document.createElement("td");
+        let col2 = document.createElement("td");
+        let col3 = document.createElement("td");
+        let col4 = document.createElement("td");
 
-})
+        //create row
+        tr.appendChild(col1);
+        tr.appendChild(col2);
+        tr.appendChild(col3);
+        tr.appendChild(col4);
+        // tr.appendChild(col5);
+
+        //set the row to the table body
+        tBody.appendChild(tr);
+
+    })
 </script>
 
 
