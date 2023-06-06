@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KnightRider ThemeLight</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <style>
+        body {
+            background-color: black;
+        }
+        section{
+            /*border: 1px solid white;*/
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            width: 1000px;
+            height: 500px;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            align-items: center;
+            margin: auto;
+        }
+        section>h2{
+            position: absolute;
+            top: 130px;
+            color: #ff253a;
+            font-size: 25px;
+
+        }
+        .line{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 800px;
+            height: 70px;
+            border-top: 2px solid gray;
+            border-bottom: 2px solid gray;
+        }
+        .line>div{
+            border: 1px solid white;
+            display: flex;
+            flex-grow: 1;
+            height: 50px;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+
+        section>.buttons{
+            /*border: 1px solid white;*/
+            width: 180px;
+            height: 40px;
+            position: absolute;
+            bottom: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        section>.buttons>button{
+            width: 85px;
+            height: 32px;
+            cursor: pointer;
+            color: white;
+            border-radius: 5px;
+        }
+        section>.buttons>button:first-child{
+            background-color: #0d6efd;
+        }
+        section>.buttons>button:last-child{
+            background-color: #ff253a;
+        }
+
+    </style>
+</head>
+<body>
+<section>
+    <h2>JavaScript Knight Rider</h2>
+    <div class="line">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="buttons">
+        <button id="startBtn">start</button>
+        <button id="stopBtn">stop</button>
+    </div>
+</section>
+
+<script>
+    // let color = ["#ff0000", "#ff253a", "#FF4C51", "#FF7272","black","black","black"];
+    let colors = ["#FF7272", "#FF4C51","#ff0000","","","",""];
+    let divArray = document.querySelector(".line").children;
+
+    for (let i = 0; i < divArray.length; i++) {
+        console.log(divArray[i]);
+        divArray[i].style.background = colors[i];
+    }
+
+    setInterval(function () {
+        for (let i = 0; i <divArray.length; i++) {
+            divArray[i].style.background = colors[i];
+        }
+        let lastValue = colors.pop();
+        colors.unshift(lastValue);
+
+    },100);
+
+
+    // document.getElementById("startBtn").addEventListener("click", startAnimation);
+    // document.getElementById("stopBtn").addEventListener("click", stopAnimation);
+
+
+
+</script>
+
+
+</body>
+</html>
