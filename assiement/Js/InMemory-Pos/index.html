@@ -68,8 +68,11 @@
                         </div>
 
 
-                        <div class="col-10">
+                        <div class="col-12">
                             <button class="btn btn-primary" id="saveCusBtn">Save</button>
+                            <button class="btn btn-success" id="updateCusBtn">Update</button>
+                            <button class="btn btn-danger" id="deleteCusBtn">Delete</button>
+                            <button class="btn btn-dark" id="getAllCusBtn">getAll</button>
                         </div>
                     </form>
 
@@ -125,15 +128,10 @@
 
 
                         <div class="col-12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                    Check me out
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-10">
-                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button class="btn btn-primary" id="saveItmBtn">Save</button>
+                            <button class="btn btn-success" id="updateItmBtn">Update</button>
+                            <button class="btn btn-danger" id="deleteItmBtn">Delete</button>
+                            <button class="btn btn-dark" id="getAllItmBtn">getAll</button>
                         </div>
                     </form>
 
@@ -442,7 +440,7 @@
 </section>
 
 <script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/jquery-3.7.0.min.js"></script>
+
 
 <script>
 
@@ -482,21 +480,35 @@
 
 </script>
 
-<script src="assets/js/jquery-3.7.0.min.js">
-    $("#saveCusBtn").click(function(){
-        let id = $("#txtCustomerId").val();
-        let name = $("#txtCustomerName").val();
-        let address = $("#txtCustomerAddress").val();
-        let contact = $("#txtCustomerContact").val();
+<script src="assets/js/jquery-3.7.0.min.js"></script>
 
-        console.log(id,name,address,contact);
+<script>
+    $("#saveCusBtn").click(function () {
 
-        let tBody = $("#tblCustomer");
-        let tr =$("tr");
-tBody.append(tr);
+        let customerId = $("#txtCustomerId").val();
+        let customerName = $("#txtCustomerName").val();
+        let customerAddress = $("#txtCustomerAddress").val();
+        let customerContact = $("#txtCustomerContact").val();
 
+        let customer = [customerId, customerName, customerAddress, customerContact];
 
+        let customerOb = {
+            id: customerId,
+            name: customerName,
+            address: customerAddress,
+            contact: customerContact
+        }
 
+        console.log(customerId, customerName, customerAddress, customerContact);
+
+        let row = `<tr>
+        <td>${customerId}</td>
+        <td>${customerName}</td>
+        <td>${customerAddress}</td>
+        <td>${customerContact}</td>
+        </tr>`;
+
+        $("#tblCustomer").append(row);
     });
 </script>
 

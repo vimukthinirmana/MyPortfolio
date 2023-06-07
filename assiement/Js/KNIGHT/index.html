@@ -72,6 +72,7 @@
             background-color: #ff253a;
         }
 
+
     </style>
 </head>
 <body>
@@ -91,50 +92,62 @@
         <button id="stopBtn">stop</button>
     </div>
 </section>
+<audio id="audio" loop>
+    <source src="assets/audio/Knight-Rider-Theme-Song.mp3">
+</audio>
 
 <script>
-    // let color = ["#ff0000", "#ff253a", "#FF4C51", "#FF7272","black","black","black"];
-    let colors = ["#FF7272", "#FF4C51","#ff0000","","","",""];
+
+    let leftColor = ["#ff0000",  "#FF4C51", "#FF7272","black","black","black","black"];
+    let rightColors = ["#FF7272", "#FF4C51","#ff0000","black","black","black","black"];
     let divArray = document.querySelector(".line").children;
+    let audio = document.getElementById("audio");
 
-    for (let i = 0; i < divArray.length; i++) {
-        console.log(divArray[i]);
-        divArray[i].style.background = colors[i];
-    }
+    let count=0;
+    let reverse=true;
+    let interval;
 
-    setInterval(function () {
-        for (let i = 0; i <divArray.length; i++) {
-            divArray[i].style.background = colors[i];
-        }
-        let lastValue = colors.pop();
-        colors.unshift(lastValue);
+    document.getElementById("startBtn").addEventListener("click", function () {
+        clearInterval(interval);
+        audio.play();
 
-    },100);
-    // ----------------------------------------------------------------------------
-    // var document.get
-    var interval;
-    var count = 0;
+        interval = setInterval(function (){
 
-    function light () {
-        if (count < 1){
-            interval = setInterval(function () {
-                for (let i = 0; i < divArray.length; i++) {
-                    divArray[i].style.background = colors[i];
+            if (reverse){
+                for (let i = 0; i <divArray.length; i++) {
+                    divArray[i].style.backgroundColor=leftColor[i];
                 }
-                colors.unshift(colors[6]);
+
+                let lastValue=leftColor.pop();
+                leftColor.unshift(lastValue);
                 count++;
-                if (count == 7){
-                    divArray.reverse()
-                    count=0;
+
+                if (count==10){
+                    reverse=false;
                 }
-            },v);
-        }
-    }
 
+            }if (reverse==false){
 
-    // document.getElementById("startBtn").addEventListener("click", startAnimation);
-    // document.getElementById("stopBtn").addEventListener("click", stopAnimation);
+                let lastColor = rightColors.shift();
+                rightColors.push(lastColor);
 
+                for (let i = 0; i < divArray.length; i++) {
+                    divArray[i].style.backgroundColor = rightColors[i];
+                }
+                count--;
+
+                if (count==1){
+                    reverse=true;
+                }
+            }
+
+        },60);
+    });
+
+    document.getElementById("stopBtn").addEventListener("click", function () {
+        clearInterval(interval);
+        audio.pause();
+    });
 
 
 </script>
