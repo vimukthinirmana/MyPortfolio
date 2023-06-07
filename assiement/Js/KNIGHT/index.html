@@ -110,6 +110,26 @@
         colors.unshift(lastValue);
 
     },100);
+    // ----------------------------------------------------------------------------
+    // var document.get
+    var interval;
+    var count = 0;
+
+    function light () {
+        if (count < 1){
+            interval = setInterval(function () {
+                for (let i = 0; i < divArray.length; i++) {
+                    divArray[i].style.background = colors[i];
+                }
+                colors.unshift(colors[6]);
+                count++;
+                if (count == 7){
+                    divArray.reverse()
+                    count=0;
+                }
+            },v);
+        }
+    }
 
 
     // document.getElementById("startBtn").addEventListener("click", startAnimation);
