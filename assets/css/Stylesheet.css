@@ -655,13 +655,18 @@ header > h1 {
 
 #experience-section > div > .box-container-experience > div:hover {
     background-color: #ffffff;
-    /*margin: 10px;*/
     opacity: 1;
     transition-duration: 0.5s;
-
     border-radius: 40px;
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 
+}
+#experience-section > div > .box-container-experience > div:hover *{
+    color: #a11fb2;
+}
+
+#experience-section > div > .box-container-experience > div:hover .parentage-circle:hover{
+    border: 1px solid #a11fb2;
 }
 
 
@@ -785,12 +790,11 @@ header > h1 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 40px;
+    margin: 60px;
 
 }
 
 #education-section > div > .box-container-education > div:hover {
-    transform: translateY(-10px);
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -1535,6 +1539,48 @@ address a:hover {
     background-size: cover;
     width: 1347px;
     height: 660px;
+}
+/*-------------address-contact---------------------*/
+.contact-page>.address-contact{
+    position: absolute;
+    right: 10px;
+    top: 165px;
+    height: 390px;
+    width: 390px;
+}
+.contact-page>.address-contact>.contact-box{
+    position: relative;
+    margin: 5px;
+    height: 110px;
+    overflow: hidden;
+}
+.contact-page>.address-contact>.contact-box>h3{
+    color: #333333;
+    position: relative;
+    left: 55px;
+    width: fit-content;
+    font-weight: bold;
+    margin: 0;
+    top: 15px;
+}
+.contact-page>.address-contact>.contact-box>.contact-circle{
+    background-color: #605f5f;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 12px;
+    position: absolute;
+}
+.contact-page>.address-contact>.contact-box>h4{
+    color: #605f5f;
+    top: 7px;
+    position: relative;
+    left: 55px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /*------------------------ scrool button ------------------ */
