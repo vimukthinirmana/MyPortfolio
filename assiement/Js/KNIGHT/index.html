@@ -34,7 +34,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 800px;
+            width: 950px;
             height: 70px;
             border-top: 2px solid gray;
             border-bottom: 2px solid gray;
@@ -97,59 +97,36 @@
 </audio>
 
 <script>
+let divArray = document.querySelectorAll(".line > div");
+let colors = ["#FF7272","#ff0000","black","black","black","black","black"];
 
-    let leftColor = ["#ff0000",  "#FF4C51", "#FF7272","black","black","black","black"];
-    let rightColors = ["#FF7272", "#FF4C51","#ff0000","black","black","black","black"];
-    let divArray = document.querySelector(".line").children;
-    let audio = document.getElementById("audio");
+let interval;
+let count = 0;
 
-    let count=0;
-    let reverse=true;
-    let interval;
-
-    document.getElementById("startBtn").addEventListener("click", function () {
-        clearInterval(interval);
-        audio.play();
-
-        interval = setInterval(function (){
-
-            if (reverse){
-                for (let i = 0; i <divArray.length; i++) {
-                    divArray[i].style.backgroundColor=leftColor[i];
-                }
-
-                let lastValue=leftColor.pop();
-                leftColor.unshift(lastValue);
-                count++;
-
-                if (count==10){
-                    reverse=false;
-                }
-
-            }if (reverse==false){
-
-                let lastColor = rightColors.shift();
-                rightColors.push(lastColor);
-
+document.getElementById("startBtn").addEventListener("click", function() {
+    clearInterval(interval);
+    count = 0;
+    document.getElementById("audio").play();
+        if (count < 1) {
+            interval = setInterval(function() {
                 for (let i = 0; i < divArray.length; i++) {
-                    divArray[i].style.backgroundColor = rightColors[i];
+                    divArray[i].style.backgroundColor = colors[i];
                 }
-                count--;
-
-                if (count==1){
-                    reverse=true;
+                colors.unshift(colors[6]);
+                count++;
+                if (count == 7) {
+                    divArray = Array.from(divArray).reverse();
+                    count = 0;
                 }
-            }
+            },60);
+        }
+});
 
-        },60);
-    });
-
-    document.getElementById("stopBtn").addEventListener("click", function () {
-        clearInterval(interval);
-        audio.pause();
-    });
-
-
+document.getElementById("stopBtn").addEventListener("click", function() {
+    document.getElementById("audio").pause();
+    clearInterval(interval);
+    count = 0;
+});
 </script>
 
 

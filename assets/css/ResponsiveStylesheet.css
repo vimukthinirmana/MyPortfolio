@@ -1,0 +1,168 @@
+/*------ tablet Devises -----------*/
+@media all and (min-width: 425px) and (max-width: 768px) {
+    /*-------- header -------------*/
+    header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        background-color: white;
+        width: 100%;
+    }
+
+    header nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    header nav ul li {
+        list-style: none;
+        margin: 0 8px;
+    }
+
+    header nav ul li a {
+        justify-content: space-between;
+        font-size: 16px;
+        position: relative;
+    }
+
+    header > h1 {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 22px;
+        position: absolute;
+        top: -3px;
+        left: 4px;
+    }
+
+    /*-------- home-page -------------*/
+    .home-page {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100%;
+        height: 522px;
+    }
+
+    .home-background-image {
+        position: absolute;
+        top: 23px;
+        right: 0;
+        width: 500px;
+        height: 500px;
+        z-index: 0;
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .home-background-image > img {
+        background-position: center;
+        background-size: cover;
+        right: -230px;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 12px;
+        width: 850px;
+        height: 578px;
+    }
+
+    .heder-text {
+        max-width: 700px;
+        position: absolute;
+        top: 210px;
+        left: 6px;
+    }
+
+    .social-card {
+        top: 230px;
+        left: 80px;
+        display: flex;
+        height: 60px;
+        width: 240px;
+        position: absolute;
+    }
+
+    .social-card svg {
+        position: absolute;
+        display: flex;
+        width: 60%;
+        height: 100%;
+        font-size: 24px;
+        font-weight: 700;
+        opacity: 1;
+        transition: opacity 0.25s;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .social-card .social-link1, .social-card .social-link2, .social-card .social-link3, .social-card .social-link4 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25%;
+        color: whitesmoke;
+        font-size: 24px;
+        text-decoration: none;
+        transition: 0.25s;
+        border-radius: 50px;
+    }
+
+    .heder-text h1 {
+        position: relative;
+        font-size: 36px;
+        margin: 0;
+        z-index: 1;
+    }
+
+    .multiText {
+        width: 500px;
+        height: 30px;
+        font-size: 32px;
+        margin: 20px 0 20px;
+        color: #333333;
+        font-weight: bold;
+
+    }
+
+    .home-page button {
+        position: relative;
+        font-size: 12px;
+        margin: 0;
+        font-weight: bold;
+
+    }
+
+    .home-page aside {
+        position: absolute;
+        top: 296px;
+        left: 565px;
+        transform: translate(-50%, -50%);
+        width: 313px;
+        height: 427px;
+        z-index: 1;
+    }
+
+    .home-page aside img {
+        position: absolute;
+        top: 27px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 0;
+    }
+
+
+    /*----------------------------------*/
+
+}
+
+
+/*----- mobile Devices --------*/
+@media all and (max-width: 425px) {
+
+
+}

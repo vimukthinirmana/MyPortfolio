@@ -110,20 +110,20 @@
                     <h5 class="text-dark text-center m-lg-3 pt-5">Add Item</h5>
                     <form class="row g-3">
                         <div class="col-md-6">
-                            <label for="cId" class="form-label">ID</label>
-                            <input type="email" class="form-control" id="cId">
+                            <label for="txtItemId" class="form-label">ID</label>
+                            <input type="id" class="form-control" id="txtItemId">
                         </div>
                         <div class="col-md-6">
                             <label for="description" class="form-label">Description</label>
-                            <input type="password" class="form-control">
+                            <input type="description" class="form-control" id="txtItemDescription">
                         </div>
                         <div class="col-md-6">
                             <label for="unitPrice" class="form-label">Unit Price</label>
-                            <input type="email" class="form-control">
+                            <input type="unitPrice" class="form-control" id="txtItemUnitprice">
                         </div>
                         <div class="col-md-6">
                             <label for="qty" class="form-label">Qty</label>
-                            <input type="password" class="form-control">
+                            <input type="qty" class="form-control" id="txtItemQty">
                         </div>
 
 
@@ -145,52 +145,9 @@
                             <th style="background-color: #0d6efd" scope="col">Description</th>
                             <th style="background-color: #0d6efd" scope="col">UnitPrice</th>
                             <th style="background-color: #0d6efd" scope="col">Qty</th>
-                            <th style="background-color: #0d6efd" scope="col">Action</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">I001</th>
-                            <td>Pen</td>
-                            <td>RS.20</td>
-                            <td>100</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">I002</th>
-                            <td>Eraser</td>
-                            <td>RS.10</td>
-                            <td>50</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">I003</th>
-                            <td>Pencil</td>
-                            <td>RS.15</td>
-                            <td>120</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">I004</th>
-                            <td>Highlight-Pen</td>
-                            <td>RS.75</td>
-                            <td>20</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-
-
+                        <tbody id="tblItem">
                         </tbody>
                     </table>
                 </section>
@@ -483,6 +440,8 @@
 <script src="assets/js/jquery-3.7.0.min.js"></script>
 
 <script>
+    var customerDB = []; //literal base array
+    $(document).ready(function() {
     $("#saveCusBtn").click(function () {
 
         let customerId = $("#txtCustomerId").val();
@@ -508,7 +467,196 @@
         <td>${customerContact}</td>
         </tr>`;
 
+
+        //regex
+        let customerIdRegex = /^\d+$/; // Only allows digits
+        let customerNameRegex = /^[a-zA-Z\s]+$/; // Only allows letters and spaces
+        let customerAddressRegex = /^[a-zA-Z0-9\s,.-]+$/; // Allows letters, digits, spaces, comma, period, and hyphen
+        let customerContactRegex = /^\d{10}$/; // Allows exactly 10 digits
+
+        // Perform validation
+        if (!customerIdRegex.test(customerId)) {
+            $("#txtCustomerId").css("border-color", "red");
+            alert("Please enter a valid Customer ID.");
+            return;
+        }
+
+        if (!customerNameRegex.test(customerName)) {
+            $("#txtCustomerName").css("border-color", "red");
+            alert("Please enter a valid Customer Name.");
+            return;
+        }
+
+        if (!customerAddressRegex.test(customerAddress)) {
+            $("#txtCustomerAddress").css("border-color", "red");
+            alert("Please enter a valid Customer Address.");
+            return;
+        }
+
+        if (!customerContactRegex.test(customerContact)) {
+            $("#txtCustomerContact").css("border-color", "red");
+            alert("Please enter a valid Customer Contact.");
+            return;
+        }
+
+
         $("#tblCustomer").append(row);
+        customerDB.push(customerOb);
+    });
+    });
+
+
+    $("#tblCustomer").on("click", "tr", function () {
+        let customerId = $(this).find('td:eq(0)').text();
+        let customerName = $(this).find('td:eq(1)').text();
+        let customerAddress = $(this).find('td:eq(2)').text();
+        let customerContact = $(this).find('td:eq(3)').text();
+
+        //set value to textField
+        $("#txtCustomerId").val(customerId);
+        $("#txtCustomerName").val(customerName);
+        $("#txtCustomerAddress").val(customerAddress);
+        $("#txtCustomerContact").val(customerContact);
+    })
+
+
+    $('#getAllItmBtn').click(function () {
+        getAllCustomer();
+    });
+
+
+    $('#deleteCusBtn').click(function () {
+        let id = $("#txtCustomerId").val();
+
+        let consent = confirm("Do you want to delete.?");
+        if (consent) {
+            let response = deleteCustomer(id);
+            if (response) {
+                alert("Customer Deleted");
+                getAllCustomer();
+            } else {
+                alert("Customer Not Removed..!");
+            }
+        }
+    });
+
+
+    $('#updateCusBtn').click(function () {
+        let id = $("#txtCustomerId").val();
+        updateCustomer(id);
+    })
+
+    function deleteCustomer(id) {
+        for (let i = 0; i < customerDB.length; i++) {
+            if (customerDB[i].id == id) {
+                customerDB.splice(i, 1);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function updateCustomer(id) {
+        if (searchCustomer(id) == undefined) {
+            alert("No such Customer..please check the ID");
+        } else {
+            let consent = confirm("Do you really want to update this customer.?");
+            if (consent) {
+                let customer = searchCustomer(id);
+                //if the customer available can we update.?
+
+                let customerName = $("#txtCustomerName").val();
+                let customerAddress = $("#txtCustomerAddress").val();
+                let customerContact = $("#txtCustomerContact").val();
+
+                customer.name = customerName;
+                customer.address = customerAddress;
+                customer.contact = customerContact;
+
+                getAllCustomer();
+            }
+        }
+
+    }
+
+    function searchCustomer(id) {
+        return customerDB.find(function (customer) {
+            return customer.id == id;
+        });
+    }
+
+    //bind table tr events
+    function bindTrEvents() {
+        $('#tblCustomer>tr').click(function () {
+            //get the selected rows data
+            let id = $(this).children().eq(0).text();
+            let name = $(this).children().eq(1).text();
+            let address = $(this).children().eq(2).text();
+            let contact = $(this).children().eq(3).text();
+
+            //set the selected rows data to the input fields
+            $("#txtCustomerId").val(id);
+            $("#txtCustomerName").val(name);
+            $("#txtCustomerAddress").val(address);
+            $("#txtCustomerContact").val(contact);
+        })
+    }
+
+
+    function getAllCustomer() {
+        $("#tblCustomer").empty();
+
+        //get all customers
+        for (let i = 0; i < customerDB.length; i++) {
+            let id = customerDB[i].id;
+            let name = customerDB[i].name;
+            let address = customerDB[i].address;
+            let contact = customerDB[i].contact;
+
+            let row = `<tr>
+                     <td>${id}</td>
+                     <td>${name}</td>
+                     <td>${address}</td>
+                     <td>${contact}</td>
+                    </tr>`;
+
+            // //and then append the row to tableBody
+            $("#tblCustomer").append(row);
+
+            bindTrEvents();
+        }
+    }
+
+
+</script>
+
+<script>
+    $("#saveItmBtn").click(function () {
+
+        let itemId = $("#txtItemId").val();
+        let itemDescription = $("#txtItemDescription").val();
+        let itemUnitPrice = $("#txtItemUnitprice").val();
+        let itemQty = $("#txtItemQty").val();
+
+        let item = [itemId, itemDescription, itemUnitPrice, itemQty];
+
+        let itemOb = {
+            id: itemId,
+            description: itemDescription,
+            unitPrice: itemUnitPrice,
+            qty: itemQty
+        }
+
+        console.log(itemId, itemDescription, itemUnitPrice, itemQty);
+
+        let row = `<tr>
+        <td>${itemId}</td>
+        <td>${itemDescription}</td>
+        <td>${itemUnitPrice}</td>
+        <td>${itemQty}</td>
+        </tr>`;
+
+        $("#tblItem").append(row);
     });
 </script>
 
