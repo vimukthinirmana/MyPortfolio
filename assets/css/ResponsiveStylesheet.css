@@ -1,5 +1,7 @@
 /*------ tablet Devises -----------*/
 @media all and (min-width: 425px) and (max-width: 768px) {
+
+
     /*-------- header -------------*/
     header {
         position: relative;
@@ -132,8 +134,8 @@
         position: relative;
         font-size: 12px;
         margin: 0;
+        left: 2px;
         font-weight: bold;
-
     }
 
     .home-page aside {
@@ -155,14 +157,1251 @@
         z-index: 0;
     }
 
+    /*-------- about-page -------------*/
+    #about {
+        position: absolute;
+        padding: 0;
+        width: 100%;
+        height: 450px;
+        /*border: 1px solid red;*/
+    }
 
-    /*----------------------------------*/
+    .about-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .about-page > .about-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 438px;
+    }
+
+    .about-page aside {
+        position: absolute;
+        display: flex;
+        top: 40px;
+        left: 0px;
+        width: 285px;
+        height: 400px;
+    }
+
+    .about-page aside img {
+        width: 285px;
+        height: 400px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    .about-page > article {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        left: 245px;
+        top: 40px;
+        width: 510px;
+        height: 400px;
+        /*border: 1px solid red;*/
+    }
+
+    .about-page > article > h2 {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0px;
+        left: 176px;
+        font-size: 35px;
+        margin: 0;
+        /*border: 1px solid red;*/
+    }
+
+    .about-page > article > p {
+        font-size: 15px;
+        line-height: 1.5;
+        position: absolute;
+        top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        width: 440px;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /*-------- skill-page -------------*/
+    #skill {
+        position: absolute;
+        /*border: 1px solid black;*/
+        width: 100%;
+        height: 530px;
+        top: 190vh;
+        left: 0;
+        padding: 0;
+    }
+
+    #skill > img {
+        position: absolute;
+        left: 0px;
+        z-index: 0;
+        width: 600px;
+        height: 560px;
+        top: 0;
+    }
+
+    .skill-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tab-titles {
+        display: flex;
+        top: 0;
+        position: absolute;
+        justify-content: space-around;
+        align-content: center;
+        /*border: 1px solid red;*/
+        width: 94%;
+        height: 50px;
+    }
+
+    .tab-links {
+        margin-right: 20px;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+    }
+
+    #skills-section {
+        position: absolute;
+        /*border: 1px solid #a11fb2;*/
+        top: 55px;
+        height: 470px;
+        width: 100%;
+        left: 0px;
+    }
+
+    #skills-section > div > h3 {
+        margin: 0;
+        position: absolute;
+        top: 0px;
+        /*border: 1px solid green;*/
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+    }
+
+    #skills-section > div > .box-container-skills {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        /*border: 1px solid peru;*/
+        top: 76px;
+        left: 0px;
+        height: 330px;
+        width: 100%;
+    }
+
+    #skills-section > div > .box-container-skills > div {
+        width: 155px;
+        height: 130px;
+        margin: 15px;
+    }
+
+    #skills-section > div > .box-container-skills > div > img {
+        background-position: center;
+        background-size: cover;
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        bottom: 20px;
+        left: -32px;
+    }
+
+    #skills-section > div > .box-container-skills > div > h4 {
+        display: flex;
+        margin-top: 10px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        top: 60px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+
+    #experience-section {
+        position: absolute;
+        /*border: 1px solid #a11fb2;*/
+        top: 56px;
+        height: 470px;
+        width: 100%;
+        left: 0px;
+    }
+
+    #experience-section > div > h3 {
+        margin: 0;
+        position: absolute;
+        top: 0px;
+        /*border: 1px solid green;*/
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+    }
+
+    #experience-section > div > .box-container-experience {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        /*border: 1px solid peru;*/
+        top: 62px;
+        left: 0;
+        height: 405px;
+        width: 100%;
+    }
+
+    #experience-section > div > .box-container-experience > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 250px;
+        height: 170px;
+        margin: 12px;
+        border-radius: 40px;
+    }
+
+    #experience-section > div > .box-container-experience > div:nth-child(1) > .parentage-circle {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        border-radius: 100%;
+    }
+
+    #experience-section > div > .box-container-experience > div:nth-child(2) > .parentage-circle {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        border-radius: 100%;
+    }
+
+    #experience-section > div > .box-container-experience > div:nth-child(3) > .parentage-circle {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        border-radius: 100%;
+    }
+
+    #experience-section > div > .box-container-experience > div:nth-child(4) > .parentage-circle {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        border-radius: 100%;
+    }
+
+
+    #experience-section > div > .box-container-experience > div > h4 {
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        top: 60px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    #experience-section > div > .box-container-experience > div > span {
+        top: -95px;
+    }
+
+    #experience-section > div > .box-container-experience > div:nth-child(1) > span > i {
+        top: 0px;
+    }
+
+    #experience-section > div > .box-container-experience > div:nth-child(2) > span > i {
+        top: 0px;
+    }
+
+    #experience-section > div > .box-container-experience > div:nth-child(3) > span > i {
+        top: 215px;
+    }
+
+    #experience-section > div > .box-container-experience > div:nth-child(4) > span > i {
+        top: 215px;
+    }
+
+    #experience-section > div > .box-container-experience > div > span > i {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-size: 62px;
+    }
+
+    #experience-section > div > .box-container-experience > div > p {
+        position: relative;
+        display: flex;
+        align-items: center;
+        top: -84px;
+        font-size: 15px;
+    }
+
+    #education-section {
+        position: absolute;
+        top: 52px;
+        height: 560px;
+        width: 100%;
+        left: 0px;
+    }
+
+    #education-section > div > h3 {
+        margin: 0;
+        position: absolute;
+        top: 0px;
+        /*border: 1px solid green;*/
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+    }
+
+    #education-section > div > .box-container-education {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid peru; */
+        top: 75px;
+        left: 0;
+        height: 400px;
+        width: 100%;
+    }
+
+    #education-section > div > .box-container-education > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 20px;
+    }
+
+    #education-section > div > .box-container-education > div > .book {
+        position: relative;
+        border-radius: 10px;
+        width: 200px;
+        height: 300px;
+        -webkit-perspective: 2000px;
+        perspective: 2000px;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    #education-section > div > .box-container-education > div > .book > .cover {
+        top: 0;
+        position: absolute;
+        background-color: lightgray;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        /*-webkit-box-pack: center;*/
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    #education-section > div > .box-container-education > div > .book > p {
+        font-size: 15px;
+        font-weight: bolder;
+    }
+
+    #education-section > div > .box-container-education > div > .book > .cover > p {
+        font-size: 30px;
+        font-weight: bold;
+        font-family: cursive;
+        color: #545454;
+        font-style: oblique;
+    }
+
+
+    /*-------- service-page -------------*/
+    #services {
+        position: absolute;
+        width: 100%;
+        height: 560px;
+        /*border: 1px solid red;*/
+        display: flex;
+        top: 285vh;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .services-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .services-page > h2 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*border: 1px solid black;*/
+        top: -30px;
+        width: 260px;
+        height: 70px;
+        font-weight: bold;
+        font-size: 36px
+    }
+
+    .box-container-services {
+        /* border: 1px solid brown; */
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 530px;
+        top: 100px;
+    }
+
+    .box-container-services > section {
+        top: -60px;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 165px;
+        height: 400px;
+        border-radius: 20px;
+        margin: 10px;
+    }
+
+    .box-container-services > section > div > {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0px;
+    }
+
+    .box-container-services > section > div > h4 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-family: Alaska;
+        /* border: 1px solid #a11fb2; */
+        padding: 0px;
+        top: 0px;
+    }
+
+    .box-container-services > section > div > p {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 12px;
+        /*border: 1px solid #ff253a;*/
+        padding: 10px;
+        width: fit-content;
+        height: 285px;
+    }
+
+    /*-------- project-page -------------*/
+    #project {
+        position: absolute;
+        width: 100%;
+        height: 530px;
+        /*border: 1px solid blue;*/
+        display: flex;
+        top: 385vh;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .project-page > h2 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0px;
+        width: 260px;
+        height: 60px;
+        font-size: 40px;
+        margin: 0;
+    }
+
+
+    .project-page > button {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: 472px;
+        padding: 12px 30px;
+        border-radius: 50px;
+        border: 0;
+        letter-spacing: 1.5px;
+        font-size: 12px;
+    }
+
+    .box-container-projects {
+        /* border: 1px solid #ffbb22; */
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 390px;
+        background: white;
+        top: 62px;
+    }
+
+    .box-container-projects > section {
+        /*border: 1px solid blue;*/
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 286px;
+        height: 180px;
+        border-radius: 15px;
+        margin: 10px;
+        overflow: hidden;
+    }
+
+    .box-container-projects > section:hover img {
+        transform: scale(1.1);
+        transition-duration: 0.5s;
+    }
+
+    .box-container-projects > section > img {
+        width: 286px;
+        height: 215px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+    }
+
+
+    .layer-project {
+        width: 206px;
+        height: 0px;
+        border-radius: 15px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0px 40px;
+        text-align: center;
+        font-size: 14px;
+        transition: height 0.8s;
+    }
+
+    .layer-project > h4 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        font-weight: bold;
+        font-size: 20px;
+        font-family: Alaska;
+        /*border: 1px solid #a11fb2;*/
+        top: 15px;
+        margin: 0;
+    }
+
+    .layer-project > p {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fcfcfd;
+        font-weight: bold;
+        font-size: 14px;
+        font-family: initial;
+        /*border: 1px solid #ff253a;*/
+        padding: 10px;
+        width: 252px;
+    }
+
+    .layer-project > a {
+        position: absolute;
+        top: 102px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+        font-size: 18px;
+        line-height: 60px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+    }
+
+    .box-container-projects > section:hover > .layer-project {
+        height: 100%;
+    }
+
+    /*-------- assignment-page -------------*/
+    #assignment {
+        position: absolute;
+        width: 100%;
+        height: 530px;
+        /* border: 1px solid #ff253a; */
+        display: flex;
+        top: 480vh;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .assignment-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .assignment-page > h2 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid black; */
+        top: 0px;
+        width: 312px;
+        height: 70px;
+        font-size: 40px;
+        margin: 0;
+    }
+
+    .assignment-page > button {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: 468px;
+        padding: 15px 30px;
+        border-radius: 50px;
+        border: 0;
+        font-size: 12px;
+        transition: all .5s ease;
+    }
+
+    .assignment-page > button:hover {
+        letter-spacing: 3px;
+        background-color: blueviolet;
+        color: hsl(0, 0%, 100%);
+        box-shadow: blueviolet 0px 7px 29px 0px;
+    }
+
+    .assignment-page > button:active {
+        letter-spacing: 3px;
+        background-color: hsl(261deg 80% 48%);
+        color: hsl(0, 0%, 100%);
+        box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+        transform: translateY(10px);
+        transition: 100ms;
+    }
+
+    .assignment-container {
+        /*border: 1px solid #a11fb2; */
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        top: 72px;
+        width: 100%;
+        height: 375px;
+    }
+
+    .assignment-card {
+        top: 10px;
+        margin: 0px 20px 20px 20px;
+        width: 250px;
+        height: 160px;
+        display: flex;
+        border-radius: 20px;
+        justify-content: center;
+        position: relative;
+    }
+
+    .assignment-card > div {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
+        cursor: pointer;
+        z-index: 10;
+        transition: all .4s;
+        background-color: #fff;
+    }
+
+    .assignment-card:hover div {
+        transform: translateY(-20px);
+        border-radius: 10px;
+        width: 60%;
+        height: 60%;
+    }
+
+    .assignment-card > div > img {
+        background-size: cover;
+        background-position: center;
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .assignment-card > p {
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 74px;
+    }
+
+    .assignment-card > a {
+        display: inline-block;
+        justify-content: center;
+        position: absolute;
+        bottom: 13px;
+        width: 30px;
+        height: 30px;
+        font-size: 30px;
+    }
+
+    .assignment-card:hover div > img {
+        border-radius: 10px;
+    }
+
+
+    /*-------- gallery-page -------------*/
+    #gallery {
+        position: absolute;
+        width: 100%;
+        height: 530px;
+        /* border: 1px solid red; */
+        display: flex;
+        top: 575vh;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .gallery-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .gallery-container {
+        /*border: 1px solid #a11fb2;*/
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 72px;
+        width: 100%;
+        height: 440px;
+    }
+
+    .gallery-page > h2 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid black; */
+        top: 0px;
+        width: 320px;
+        height: 70px;
+        font-size: 40px;
+        user-select: none;
+        margin: 0;
+    }
+
+    .cards {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card {
+        background-size: cover;
+        background-position: center;
+        /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 1.0);
+        z-index: 1;
+        position: absolute;
+        width: 390px;
+        height: 240px;
+        border-radius: 10px;
+        transition: all .5s ease-out;
+        overflow: hidden;
+        transform: translateX(0px) translateY(0px) perspective(905px) rotateX(0deg) rotateY(0deg) rotateZ(-8deg);
+    }
+
+    .cardDetails > img {
+        width: 390px;
+        height: 240px;
+        border-radius: 10px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card.one {
+        top: -190px;
+        left: -322px;
+    }
+
+    .card.two {
+        top: -117px;
+        left: -212px;
+    }
+
+    .card.three {
+        top: -42px;
+        left: -88px;
+    }
+
+    /*-------- contact-page -------------*/
+    #contact {
+        position: absolute;
+        width: 100%;
+        height: 530px;
+        /* border: 1px solid indigo; */
+        display: flex;
+        top: 670vh;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: -9px;
+    }
+
+    .contact-page > h2 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*border: 1px solid black;*/
+        top: 0px;
+        width: 300px;
+        height: 45px;
+        font-size: 26px;
+        margin: 0;
+    }
+
+    .contact-page > h3 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*border: 1px solid black;*/
+        top: 47px;
+        width: 400px;
+        height: 50px;
+        font-size: 42px;
+        margin: 0;
+    }
+
+    .contact-page > h5 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*border: 1px solid black;*/
+        top: 98px;
+        width: 700px;
+        height: 30px;
+        font-size: 12px;
+        margin: 0;
+    }
+
+
+    .contact-form {
+        /*border: 1px solid red;*/
+        position: absolute;
+        display: flex;
+        text-align: left;
+        max-width: 400px;
+        height: 395px;
+        left: 0px;
+        top: 130px;
+    }
+
+    .contact-form label {
+        font-size: 18px;
+        display: block;
+        margin-bottom: 0px;
+        text-align: left;
+    }
+
+    .contact-form > fieldset {
+        width: 330px;
+        margin: 0;
+        height: fit-content;
+        padding: 10px 20px 10px 20px;
+        border-radius: 10px;
+        border: 1px solid #e5e5e5;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        width: 100%;
+        padding: 6px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        border: 2px solid #ada9a9;
+        border-radius: 4px;
+        resize: none;
+    }
+
+    .contact-form textarea {
+        height: 150px;
+    }
+
+    .contact-form button[type="submit"] {
+        background-color: #333333;
+        display: flex;
+        color: #fff;
+        align-items: center;
+        padding: 8px 25px;
+        border: none;
+        border-radius: 20px;
+        font-size: 13px;
+    }
+
+    address {
+        font-size: 18px;
+        color: #888;
+    }
+
+    address a {
+        display: inline-block;
+        margin-right: 20px;
+        color: #888;
+    }
+
+
+    .contact-page > img {
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 530px;
+    }
+
+    /*-------------address-contact---------------------*/
+    .contact-page > .address-contact {
+        position: absolute;
+        right: -17px;
+        top: 129px;
+        height: 396px;
+        width: 390px;
+        /*border: 1px solid blue;*/
+    }
+
+    .contact-page > .address-contact > .contact-box {
+        position: relative;
+        margin: 5px;
+        height: 90px;
+        overflow: hidden;
+    }
+
+    .contact-page > .address-contact > .contact-box > h3 {
+        position: relative;
+        left: 107px;
+        width: fit-content;
+        font-weight: bold;
+        margin: 0;
+        top: 15px;
+    }
+
+    .contact-page > .address-contact > .contact-box > .contact-circle {
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 12px;
+        left: 60px;
+        position: absolute;
+    }
+
+    .contact-page > .address-contact > .contact-box > h4 {
+        top: 7px;
+        position: relative;
+        left: 108px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /*----------------------------- footer ------------------------------------*/
+    #footer {
+        position: absolute;
+        width: 100%;
+        height: 120px;
+        /* border: 1px solid indigo; */
+        display: flex;
+        top: 765vh;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footer > p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 30px;
+
+        font-size: 20px;
+        color: #cbcbcb;
+    }
+
 
 }
 
 
-/*----- mobile Devices --------*/
+/*----------------------------- mobile Devices -------------------------------*/
 @media all and (max-width: 425px) {
+    /*-------- header -------------*/
+    header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 50px;
+        background-color: white;
+        width: 100%;
+    }
 
+    header nav ul {
+        display: flex;
+        /* justify-content: flex-end; */
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        margin-left: 0%;
+    }
+
+    header nav ul li {
+        list-style: none;
+        margin: 0 9px;
+    }
+
+    header nav ul li a {
+        justify-content: space-between;
+        font-size: 13px;
+        position: relative;
+        font-weight: bold;
+    }
+
+    header > h1 {
+        display: none;
+    }
+
+    /*-------- home-page -------------*/
+    .home-page {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100%;
+        height: 522px;
+    }
+
+    .home-background-image {
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 100%;
+        height: 350px;
+        /*border: 1px solid red;*/
+        z-index: 0;
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .home-background-image > img {
+        background-position: center;
+        background-size: cover;
+        right: -66px;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 25px;
+        width: 395px;
+        height: 239px;
+    }
+
+    .heder-text {
+        max-width: 100%;
+        position: absolute;
+        top: 100px;
+        left: 6px;
+        /*border: 1px solid red;*/
+    }
+
+    .social-card {
+        width: 210px;
+        top: 140px;
+        left: 0px;
+        display: flex;
+        height: 50px;
+        position: absolute;
+        /*border: 1px solid red;*/
+    }
+
+    .social-card svg {
+        position: absolute;
+        display: flex;
+        width: 50%;
+        height: 100%;
+        font-size: 24px;
+        font-weight: 700;
+        opacity: 1;
+        transition: opacity 0.25s;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .social-card .social-link1, .social-card .social-link2, .social-card .social-link3, .social-card .social-link4 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20%;
+        color: whitesmoke;
+        font-size: 24px;
+        text-decoration: none;
+        transition: 0.25s;
+        border-radius: 50px;
+    }
+
+    .heder-text h1 {
+        position: relative;
+        font-size: 18px;
+        margin: 0;
+        z-index: 1;
+    }
+
+    .multiText {
+        width: 500px;
+        height: 30px;
+        font-size: 20px;
+        margin: 10px 0 10px;
+        color: #333333;
+        font-weight: bold;
+    }
+
+    .home-page button {
+        position: relative;
+        font-size: 10px;
+        margin: 0;
+        left: 0px;
+        font-weight: bold;
+        padding: 6px 15px;
+    }
+
+    .home-page aside {
+        position: absolute;
+        top: 165px;
+        left: 308px;
+        transform: translate(-50%, -50%);
+        width: 160px;
+        height: 250px;
+        z-index: 1;
+        /*border: 1px solid blue;*/
+    }
+
+    .home-page aside img {
+        position: absolute;
+        top: 14px;
+        left: 0;
+        width: 90%;
+        height: auto;
+        z-index: 0;
+    }
 
 }
