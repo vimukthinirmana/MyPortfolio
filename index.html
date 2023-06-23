@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/fonts-awesome/css/all.min.css">
     <link rel="stylesheet" href="assets/css/ResponsiveStylesheet.css">
+    <script src="assets/js/javaScript.js"></script>
 
 </head>
 
@@ -523,16 +524,10 @@
                 </div>
             </div>
 
-            <!--            <address>-->
-            <!--                <a href="tel:0768679867">Phone Number</a>-->
-            <!--                <a href="mailto:vimukthinirmana64@gmail.com">Email</a>-->
-            <!--                <a href="https://wa.me/1234567890">WhatsApp</a>-->
-            <!--                <a href="https://www.linkedin.com/myprofile">LinkedIn</a>-->
-            <!--                <br>-->
-            <!--                <label>Follow Me</label>-->
-            <!--            </address>-->
+
         </div>
     </section>
+
     <button id="scrollButton" onclick="scrollToTop()">
         <i class="fas fa-chevron-up fa-bounce"></i>
     </button>
@@ -549,6 +544,14 @@
     </address>
 </footer>
 
+<!-- ------------------------------------ loding animation -------------------------------------- -->
+<!--<div id="overlay">
+    <div class="loader"></div>
+    <div class="radar"></div>
+    <p class="loading-text">Loading...</p>
+</div>-->
+
+<!-- ------------------------------------ javaScript  -------------------------------------- -->
 
 <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 <script>
@@ -563,40 +566,6 @@
 </script>
 
 
-<script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname) {
-        for (tablink of tablinks) {
-            tablink.classList.remove("active-link");
-        }
-        for (tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-</script>
-
-<script>
-    window.addEventListener('scroll', toggleScrollButton);
-
-    function toggleScrollButton() {
-        var scrollButton = document.getElementById('scrollButton');
-        if (window.pageYOffset > 0) {
-            scrollButton.style.display = 'block'; // Show the button when scrolling down
-        } else {
-            scrollButton.style.display = 'none'; // Hide the button when at the top
-        }
-    }
-
-    function scrollToTop() {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    }
-
-
-</script>
 
 </body>
 
