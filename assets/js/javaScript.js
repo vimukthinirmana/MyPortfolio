@@ -1,17 +1,15 @@
 // web page loding animation
-/*
 window.addEventListener('load', function () {
     // Show the loader initially
-    document.getElementById('overlay').style.display = 'flex';
-    document.getElementById('html').style.display = 'none';
+    document.getElementById('loders').style.display = 'flex';
+    //document.getElementById('html').style.display = 'none';
 
     // Hide the loader and show the content after 5 seconds
     setTimeout(function () {
-        document.getElementById('overlay').style.display = 'none';
-        document.getElementById('html').style.display = 'block';
+        document.getElementById('loders').style.display = 'none';
+        //document.getElementById('html').style.display = 'block';
     }, 5000); // 5 seconds (5000 milliseconds)
 });
-*/
 
 
 

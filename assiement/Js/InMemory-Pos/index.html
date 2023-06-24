@@ -74,7 +74,7 @@
                             <button class="btn btn-primary" id="saveCusBtn">Save</button>
                             <button class="btn btn-success" id="updateCusBtn">Update</button>
                             <button class="btn btn-danger" id="deleteCusBtn">Delete</button>
-                            <button class="btn btn-dark" id="getAllCusBtn">getAll</button>
+<!--                            <button class="btn btn-dark" id="getAllCusBtn">getAll</button>-->
                         </div>
                     </form>
 
@@ -133,7 +133,7 @@
                             <button class="btn btn-primary" id="saveItmBtn">Save</button>
                             <button class="btn btn-success" id="updateItmBtn">Update</button>
                             <button class="btn btn-danger" id="deleteItmBtn">Delete</button>
-                            <button class="btn btn-dark" id="getAllItmBtn">getAll</button>
+<!--                            <button class="btn btn-dark" id="getAllItmBtn">getAll</button>-->
                         </div>
                     </form>
 
@@ -390,50 +390,20 @@
 </script>
 
 <script src="assets/js/jquery-3.7.0.min.js"></script>
-<script src="assets/db/db.js"></script>
+<script src="db/db.js"></script>
 <!---------------------------- customer script------------------------------>
 
-<script src="assets/controller/customerController.js"></script>
+<script src="controller/customerController.js"></script>
+<script src="model/customerModel.js"></script>
 
 <!---------------------------- item script------------------------------>
 
-<script src="assets/controller/itemController.js"></script>
+<script src="controller/itemController.js"></script>
+<script src="model/itemModel.js"></script>
 
 <!---------------------------- placeOrder script------------------------------>
 
-<script src="assets/controller/placeOrderController.js"></script>
-
-<!--<script>
-    document.getElementById("saveCusBtn").addEventListener("click", function () {
-        let id = document.getElementById("txtCustomerId").value;
-        let name = document.getElementById("txtCustomerName").value;
-        let address = document.getElementById("txtCustomerAddress").value;
-        let contact = document.getElementById("txtCustomerContact").value;
-
-        console.log(id, name, address, contact);
-
-        let tBody = document.getElementById("tblCustomer");
-
-        let tr = document.createElement("tr");
-
-        //create column
-        let col1 = document.createElement("td");
-        let col2 = document.createElement("td");
-        let col3 = document.createElement("td");
-        let col4 = document.createElement("td");
-
-        //create row
-        tr.appendChild(col1);
-        tr.appendChild(col2);
-        tr.appendChild(col3);
-        tr.appendChild(col4);
-        // tr.appendChild(col5);
-
-        //set the row to the table body
-        tBody.appendChild(tr);
-
-    })
-</script>-->
+<script src="controller/placeOrderController.js"></script>
 
 
 </body>

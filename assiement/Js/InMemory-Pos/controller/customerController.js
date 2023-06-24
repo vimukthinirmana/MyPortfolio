@@ -8,7 +8,7 @@ $('#saveCusBtn').click(function () {
 
     let customer = [customerId, customerName, customerAddress, customerContact];
 
-    let customerOb = {
+    customerModel = {
         id: customerId,
         name: customerName,
         address: customerAddress,
@@ -25,7 +25,8 @@ $('#saveCusBtn').click(function () {
         </tr>`;
 
     $("#tblCustomer").append(row);
-    customerDB.push(customerOb);
+    customerDB.push(customerModel);
+    clearCustomerInputFields();
 });
 
 
@@ -42,10 +43,6 @@ $("#tblCustomer").on("click", "tr", function () {
     $("#txtCustomerContact").val(customerContact);
 });
 
-
-$('#getAllItmBtn').click(function () {
-    getAllCustomer();
-});
 
 
 $('#deleteCusBtn').click(function () {
@@ -123,7 +120,8 @@ function bindTrEvents() {
         $("#txtCustomerName").val(name);
         $("#txtCustomerAddress").val(address);
         $("#txtCustomerContact").val(contact);
-    })
+
+    });
 }
 
 
@@ -152,3 +150,113 @@ function getAllCustomer() {
 }
 
 
+//validation for customer
+const CusIdRegex = /^(C00-)[0-9]{3}$/;
+const CusNameRegex = /^[A-Za-z ]{5,}$/;
+const CusAddressRegex = /^[A-Za-z0-9 ]{5,}$/;
+const CusContactRegex = /^[0-9]{10,}$/;
+
+//add validations set text fields
+let cusValidateArray = new Array();
+cusValidateArray.push({field: $("#txtCustomerId"), regEx: CusIdRegex});
+cusValidateArray.push({field: $("#txtCustomerName"), regEx: CusNameRegex});
+cusValidateArray.push({field: $("#txtCustomerAddress"), regEx: CusAddressRegex});
+cusValidateArray.push({field: $("#txtCustomerContact"), regEx: CusContactRegex});
+
+function clearCustomerInputFields() {
+    $("#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact").val("");
+    $("#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact").css("border", "1px solid #ced4da");
+    $("#txtCustomerID").focus();
+    setBtn();
+}
+
+setBtn();
+
+//disable tab
+$("#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact").on("keydown keyup", function (e) {
+    //get the index number of data input fields indexNo
+    let indexNo = cusValidateArray.indexOf(cusValidateArray.find((c) => c.field.attr("id") == e.target.id));
+
+    //Disable tab key
+    if (e.key == "Tab") {
+        e.preventDefault();
+    }
+
+    //check validations
+    checkValidations(cusValidateArray[indexNo]);
+
+    setBtn();
+
+    //If the enter key pressed cheque and focus
+    if (e.key == "Enter") {
+
+        if (e.target.id != cusValidateArray[cusValidateArray.length - 1].field.attr("id")) {
+            //check validation is ok
+            if (checkValidations(cusValidateArray[indexNo])) {
+                cusValidateArray[indexNo + 1].field.focus();
+            }
+        } else {
+            if (checkValidations(cusValidateArray[indexNo])) {
+                saveCustomer();
+            }
+        }
+    }
+});
+
+
+function checkValidations(object) {
+    if (object.regEx.test(object.field.val())) {
+        setBorder(true, object)
+        return true;
+    }
+    setBorder(false, object)
+    return false;
+}
+
+
+function setBorder(bol, ob) {
+    if (!bol) {
+        if (ob.field.val().length >= 1) {
+            ob.field.css("border", "2px solid red");
+        } else {
+            ob.field.css("border", "1px solid #ced4da");
+        }
+    } else {
+        if (ob.field.val().length >= 1) {
+            ob.field.css("border", "2px solid green");
+        } else {
+            ob.field.css("border", "1px solid #ced4da");
+        }
+    }
+
+}
+
+
+function checkAll() {
+    for (let i = 0; i < cusValidateArray.length; i++) {
+        if (!checkValidations(cusValidateArray[i])) return false;
+    }
+    return true;
+}
+
+
+function setBtn() {
+    $("#deleteCusBtn").prop("disabled", true);
+    $("#updateCusBtn").prop("disabled", true);
+
+    if (checkAll()) {
+        $("#saveCusBtn").prop("disabled", false);
+    } else {
+        $("#saveCusBtn").prop("disabled", true);
+    }
+
+    let id = $("#txtCustomerId").val();
+    if (searchCustomer(id) == undefined) {
+        $("#deleteCusBtn").prop("disabled", true);
+        $("#updateCusBtn").prop("disabled", true);
+    } else {
+        $("#deleteCusBtn").prop("disabled", false);
+        $("#updateCusBtn").prop("disabled", false);
+    }
+
+}
