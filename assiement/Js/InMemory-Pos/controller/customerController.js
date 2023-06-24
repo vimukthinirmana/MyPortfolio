@@ -45,6 +45,7 @@ $("#tblCustomer").on("click", "tr", function () {
 
 
 
+
 $('#deleteCusBtn').click(function () {
     let id = $("#txtCustomerId").val();
 
@@ -61,10 +62,12 @@ $('#deleteCusBtn').click(function () {
 });
 
 
+
 $('#updateCusBtn').click(function () {
     let id = $("#txtCustomerId").val();
     updateCustomer(id);
 });
+
 
 
 function deleteCustomer(id) {
@@ -76,6 +79,7 @@ function deleteCustomer(id) {
     }
     return false;
 }
+
 
 function updateCustomer(id) {
     if (searchCustomer(id) == undefined) {
@@ -105,6 +109,8 @@ function searchCustomer(id) {
         return customer.id == id;
     });
 }
+
+
 
 //bind table tr events
 function bindTrEvents() {
@@ -171,6 +177,7 @@ function clearCustomerInputFields() {
 }
 
 setBtn();
+
 
 //disable tab
 $("#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact").on("keydown keyup", function (e) {
