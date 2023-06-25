@@ -2,24 +2,24 @@
 $("#saveItmBtn").click(function () {
 
     let itemId = $("#txtItemId").val();
-    let itemDescription = $("#txtItemDescription").val();
+    let itemName = $("#txtItemName").val();
     let itemUnitPrice = $("#txtItemUnitprice").val();
     let itemQty = $("#txtItemQty").val();
 
-    let item = [itemId, itemDescription, itemUnitPrice, itemQty];
+    let item = [itemId, itemName, itemUnitPrice, itemQty];
 
     itemModel = {
         id: itemId,
-        description: itemDescription,
+        name: itemName,
         unitPrice: itemUnitPrice,
         qty: itemQty
     }
 
-    console.log(itemId, itemDescription, itemUnitPrice, itemQty);
+    console.log(itemId, itemName, itemUnitPrice, itemQty);
 
     let row = `<tr>
         <td>${itemId}</td>
-        <td>${itemDescription}</td>
+        <td>${itemName}</td>
         <td>${itemUnitPrice}</td>
         <td>${itemQty}</td>
         </tr>`;
@@ -32,12 +32,12 @@ $("#saveItmBtn").click(function () {
 //set value to textField
 $("#tblItem").on("click", "tr", function () {
     let itemId = $(this).find('td:eq(0)').text();
-    let itemDescription = $(this).find('td:eq(1)').text();
+    let itemName = $(this).find('td:eq(1)').text();
     let itemUnitPrice = $(this).find('td:eq(2)').text();
     let itemQty = $(this).find('td:eq(3)').text();
 
     $("#txtItemId").val(itemId);
-    $("#txtItemDescription").val(itemDescription);
+    $("#txtItemName").val(itemName);
     $("#txtItemUnitprice").val(itemUnitPrice);
     $("#txtItemQty").val(itemQty);
 });
@@ -91,11 +91,11 @@ function updateItem(id) {
             let item = searchItem(id);
             //if the item available can we update.?
 
-            let itemDescription = $("#txtItemDescription").val();
+            let itemName = $("#txtItemName").val();
             let itemUnitPrice = $("#txtItemUnitprice").val();
             let itemQty = $("#txtItemQty").val();
 
-            item.description = itemDescription;
+            item.name = itemName;
             item.unitPrice = itemUnitPrice;
             item.qty = itemQty;
 
@@ -112,13 +112,13 @@ function getAllItem() {
     //get all items
     for (let i = 0; i < itemDB.length; i++) {
         let id = itemDB[i].id;
-        let description = itemDB[i].description;
+        let name = itemDB[i].name;
         let unitPrice = itemDB[i].unitPrice;
         let qty = itemDB[i].qty;
 
         let row = `<tr>
                      <td>${id}</td>
-                     <td>${description}</td>
+                     <td>${name}</td>
                      <td>${unitPrice}</td>
                      <td>${qty}</td>
                     </tr>`;
@@ -136,13 +136,13 @@ function bindTrEvents() {
     $('#tblItem>tr').click(function () {
         //get the selected rows data
         let id = $(this).children().eq(0).text();
-        let description = $(this).children().eq(1).text();
+        let name = $(this).children().eq(1).text();
         let unitPrice = $(this).children().eq(2).text();
         let qty = $(this).children().eq(3).text();
 
         //set the selected rows data to the input fields
         $("#txtItemId").val(id);
-        $("#txtItemDescription").val(description);
+        $("#txtItemName").val(name);
         $("#txtItemUnitprice").val(unitPrice);
         $("#txtItemQty").val(qty);
     })
@@ -151,20 +151,20 @@ function bindTrEvents() {
 
 //validation for item
 const ItmIdRegex = /^(I00-)[0-9]{3}$/;
-const ItmDescriptionRegex = /^[A-Za-z ]{3,}$/;
+const ItmNameRegex = /^[A-Za-z ]{3,}$/;
 const ItmUnitpriceRegex = /^[0-9 ]{2,}$/;
 const ItmQtyRegex = /^[0-9]{1,}$/;
 
 //add validations set text fields
 let itmValidateArray = new Array();
 itmValidateArray.push({field: $("#txtItemId"), regEx: ItmIdRegex});
-itmValidateArray.push({field: $("#txtItemDescription"), regEx: ItmDescriptionRegex});
+itmValidateArray.push({field: $("#txtItemName"), regEx: ItmNameRegex});
 itmValidateArray.push({field: $("#txtItemUnitprice"), regEx: ItmUnitpriceRegex});
 itmValidateArray.push({field: $("#txtItemQty"), regEx: ItmQtyRegex});
 
 function clearItemInputFields() {
-    $("#txtItemId,#txtItemDescription,#txtItemUnitprice,#txtItemQty").val("");
-    $("#txtItemId,#txtItemDescription,#txtItemUnitprice,#txtItemQty").css("border", "1px solid #ced4da");
+    $("#txtItemId,#txtItemName,#txtItemUnitprice,#txtItemQty").val("");
+    $("#txtItemId,#txtItemName,#txtItemUnitprice,#txtItemQty").css("border", "1px solid #ced4da");
     $("#txtItemId").focus();
     setBtn();
 }
@@ -172,7 +172,7 @@ function clearItemInputFields() {
 setBtn();
 
 //disable tab
-$("#txtItemId,#txtItemDescription,#txtItemUnitprice,#txtItemQty").on("keydown keyup", function (e) {
+$("#txtItemId,#txtItemName,#txtItemUnitprice,#txtItemQty").on("keydown keyup", function (e) {
     //get the index number of data input fields indexNo
     let indexNo = itmValidateArray.indexOf(itmValidateArray.find((c) => c.field.attr("id") == e.target.id));
 
@@ -246,7 +246,7 @@ function setBtn() {
     if (checkAll()) {
         $("#saveItmBtn").prop("disabled", false);
     } else {
-        $("#saveItmBtn").prop("disabled", true);
+        // $("#saveItmBtn").prop("disabled", true);
     }
 
     let id = $("#txtItemId").val();

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DOM manipulation</title>
+    <title>InMemory-Pos</title>
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/jquery-3.7.0.min.js"></script>
@@ -44,13 +44,11 @@
 </header>
 <body>
 <section>
-    <main id="customer-section">
-        <section class="p-2 mb-2 bg-primary-subtle text-emphasis-primary">
-
-            <section class="row p-3 m-0 object-fit-contain col-12" id="customer">
-                <h2 class="text-success pt-5 m-lg-2">Manage Customers</h2>
+    <main id="customer-section" class="tab-contents bg-primary-subtle p-5">
+            <section class="row p-12 m-0 object-fit-contain col-12" id="customer">
+                <h2 class="text-primary text-center pt-12 m-lg-2">Manage Customers</h2>
                 <section class="col border-dark m-3 border rounded object-fit-contain">
-                    <h5 class="text-dark text-center m-lg-3 pt-5">Add Customer</h5>
+                    <h5 class="text-dark text-center m-lg-3 pt-12">Add Customer</h5>
                     <form class="row g-3">
                         <div class="col-md-6">
                             <label for="txtCustomerId">ID</label>
@@ -70,7 +68,7 @@
                         </div>
 
 
-                        <div class="col-12 m-3" >
+                        <div class="col-12 m-3 " >
                             <button class="btn btn-primary" id="saveCusBtn">Save</button>
                             <button class="btn btn-success" id="updateCusBtn">Update</button>
                             <button class="btn btn-danger" id="deleteCusBtn">Delete</button>
@@ -96,35 +94,31 @@
 
                     </table>
                 </section>
-            </section>
-
         </section>
     </main>
 
     <!--    item ----------------------------------------------------->
 
-    <main id="item-section" class="tab-contents">
-        <section class="p-3 mb-2 bg-primary-subtle text-emphasis-primary">
-
-            <section class="row p-4 m-0 object-fit-contain col-12" id="item">
-                <h2 class="text-success pt-5 m-lg-2">Manage Item</h2>
+    <main id="item-section" class="tab-contents bg-primary-subtle p-5">
+            <section class="row p-12 m-0 object-fit-contain col-12" id="item">
+                <h2 class="text-primary text-center pt-12 m-lg-2">Manage Item</h2>
                 <section class="col border-dark m-3 border rounded object-fit-contain">
-                    <h5 class="text-dark text-center m-lg-3 pt-5">Add Item</h5>
+                    <h5 class="text-dark text-center m-lg-3 pt-12">Add Item</h5>
                     <form class="row g-3">
                         <div class="col-md-6">
-                            <label for="txtItemId" class="form-label">ID</label>
+                            <label for="txtItemId" class="form-label">Item ID</label>
                             <input type="id" class="form-control" id="txtItemId">
                         </div>
                         <div class="col-md-6">
-                            <label for="description" class="form-label">Description</label>
-                            <input type="description" class="form-control" id="txtItemDescription">
+                            <label for="txtItemName" class="form-label">Item Name</label>
+                            <input type="ItemName" class="form-control" id="txtItemName">
                         </div>
                         <div class="col-md-6">
                             <label for="unitPrice" class="form-label">Unit Price</label>
                             <input type="unitPrice" class="form-control" id="txtItemUnitprice">
                         </div>
                         <div class="col-md-6">
-                            <label for="qty" class="form-label">Qty</label>
+                            <label for="qty" class="form-label">Item Qty</label>
                             <input type="qty" class="form-control" id="txtItemQty">
                         </div>
 
@@ -153,14 +147,11 @@
                         </tbody>
                     </table>
                 </section>
-            </section>
-
         </section>
     </main>
 
     <!--    order ------------------------------------------------->
-    <main id="order-section" class="tab-contents">
-        <section class="p-3 mb-2 bg-primary-subtle text-emphasis-primary">
+    <main id="order-section" class="tab-contents bg-primary-subtle p-5">
             <section class="row p-4 m-0 object-fit-contain col-12" id="orderDetails">
                 <section class="col border-dark m-3 border rounded object-fit-contain col-12">
                     <h5 class="text-dark text-center m-lg-3 pb-3">Order Details</h5>
@@ -261,86 +252,87 @@
                         </tbody>
                     </table>
                 </section>
-            </section>
         </section>
     </main>
 
     <!--    place order -------------------------------------->
-    <main id="placeOrder-section" class="tab-contents">
-        <section class="p-3 mb-2 bg-primary-subtle text-emphasis-primary">
-            <h2 class="text-success pt-5 m-lg-2">Place Order</h2>
+    <main id="placeOrder-section" class="tab-contents bg-primary-subtle p-3">
+            <h2 class="text-primary  text-center pt-12 m-lg-2">Place Order</h2>
             <section class="col border-dark m-3 border rounded object-fit-contain">
                 <form class="row g-3">
-                    <div class="col-md-3">
+                    <div class="col-md-2 m-3">
                         <label for="OrderID" class="form-label">OrderID</label>
-                        <input type="orderID" class="form-control" id="OrderID">
-                    </div>
-                    <div class="col-md-2">
-                        <label for="date" class="form-label">Date</label>
-                        <input type="date" class="form-control" id="date">
+                        <input type="orderID" class="form-control" id="OrderID" readonly="readonly">
                     </div>
                     <div class="col-md-3">
-                        <label for="customerID" class="form-label">CustomerID</label>
-                        <input type="text" class="form-control" id="customerID">
+                        <label for="txtdate" class="form-label">Date</label>
+                        <input type="date" class="form-control" id="txtdate">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
+                        <label for="selectCusID" class="form-label">CustomerID</label>
+                        <select class="form-select"   id="selectCusID">
+                        </select>
+                    </div>
+                    <div class="col-md-3">
                         <label for="customerName" class="form-label">CustomerName</label>
-                        <input type="text" class="form-control" id="customerName">
+                        <input type="text" class="form-control" readonly="readonly" id="customerName">
+                    </div>
+                    <div class="col-md-2 m-3">
+                        <label for="selectItemID" class="form-label">Item ID</label>
+                        <select class="form-select"  readonly="readonly" id="selectItemID">
+                        </select>
                     </div>
                     <div class="col-md-3">
-                        <label for="ItemID" class="form-label">ItemID</label>
-                        <input type="text" class="form-control" id="ItemID">
-                    </div>
-                    <div class="col-md-4">
-                        <label for="Description" class="form-label">Description</label>
-                        <input type="text" class="form-control" id="Description">
+                        <label for="itemName" class="form-label">Item Name</label>
+                        <input type="text" class="form-control"readonly="readonly" id="itemName">
                     </div>
 
                     <div class="col-md-2">
                         <label for="qtyOnHand" class="form-label">Qty On Hand</label>
-                        <input type="text" class="form-control" id="qtyOnHand">
+                        <input type="text" class="form-control" readonly="readonly" id="qtyOnHand">
                     </div>
                     <div class="col-md-2">
                         <label for="unitPrice" class="form-label">UnitPrice</label>
-                        <input type="text" class="form-control" id="unitPrice">
+                        <input type="text" class="form-control" readonly="readonly" id="unitPrice">
                     </div>
-                    <div class="col-md-1">
+                    <div class="col-md-1  m-lg-3">
                         <label for="qty" class="form-label">Qty</label>
                         <input type="text" class="form-control" id="qty">
                     </div>
 
-                    <div class="col-12 m-3">
-                        <button type="submit" class="btn btn-primary">Add Cart</button>
-                        <button type="submit" class="btn btn-warning">Cansel</button>
+                    <div class="col-12 m-lg-3">
+                        <button type="submit" class="btn btn-primary" id="addCartBtn">Add Cart</button>
+<!--                        <button type="submit" class="btn btn-warning">Cansel</button>-->
                     </div>
                 </form>
 
 
                 <section class="col border-dark m-3 border rounded object-fit-contain col-md-18 ">
                     <h5 class="text-dark text-center m-lg-3 pb-3">Add To Cart Details</h5>
-                    <table class="table table-light table-striped">
+                    <table class="table table-light table-striped  ">
                         <thead>
                         <tr>
                             <th style="background-color: #0d6efd" scope="col">OrderID</th>
                             <th style="background-color: #0d6efd" scope="col">ItemID</th>
-                            <th style="background-color: #0d6efd" scope="col">Description</th>
+                            <th style="background-color: #0d6efd" scope="col">CustomerID</th>
+                            <th style="background-color: #0d6efd" scope="col">ItemName</th>
                             <th style="background-color: #0d6efd" scope="col">Qty</th>
                             <th style="background-color: #0d6efd" scope="col">UnitPrice</th>
                             <th style="background-color: #0d6efd" scope="col">Total</th>
+                            <th style="background-color: #0d6efd" scope="col">Action</th>
                         </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="tblAddCart">
                         </tbody>
                     </table>
-                    <div class="col-md-2">
+                    <div class="col-md-2 m-2">
                         <input type="Total" class="form-control" id="total" placeholder="TotalPrice :">
                     </div>
                 </section>
-                <div class="col-12 m-3">
-                    <button type="submit" class="btn btn-success">PlaceOrder</button>
-                    <button type="submit" class="btn btn-danger">Cansel</button>
+                <div class="col-12  m-3 ">
+                    <button type="submit" class="btn btn-success" id="placeOrderBtn">PlaceOrder</button>
+<!--                    <button type="submit" class="btn btn-danger">Cansel</button>-->
                 </div>
-            </section>
         </section>
 
     </main>

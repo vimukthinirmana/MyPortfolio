@@ -1,6 +1,6 @@
 let itemModel = {
     id: " ",
-    description: " ",
+    name: " ",
     unitPrice: 0,
     qty: 0
 }

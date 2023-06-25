@@ -27,6 +27,7 @@ $('#saveCusBtn').click(function () {
     $("#tblCustomer").append(row);
     customerDB.push(customerModel);
     clearCustomerInputFields();
+    console.log(customerDB);
 });
 
 
@@ -254,7 +255,7 @@ function setBtn() {
     if (checkAll()) {
         $("#saveCusBtn").prop("disabled", false);
     } else {
-        $("#saveCusBtn").prop("disabled", true);
+        // $("#saveCusBtn").prop("disabled", true);
     }
 
     let id = $("#txtCustomerId").val();
