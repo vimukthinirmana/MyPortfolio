@@ -260,8 +260,8 @@ function setBtn() {
 
     let id = $("#txtCustomerId").val();
     if (searchCustomer(id) == undefined) {
-        $("#deleteCusBtn").prop("disabled", true);
-        $("#updateCusBtn").prop("disabled", true);
+        // $("#deleteCusBtn").prop("disabled", true);
+        // $("#updateCusBtn").prop("disabled", true);
     } else {
         $("#deleteCusBtn").prop("disabled", false);
         $("#updateCusBtn").prop("disabled", false);

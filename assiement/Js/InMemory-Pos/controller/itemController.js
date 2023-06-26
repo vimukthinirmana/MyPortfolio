@@ -251,8 +251,8 @@ function setBtn() {
 
     let id = $("#txtItemId").val();
     if (searchItem(id) == undefined) {
-        $("#deleteItmBtn").prop("disabled", true);
-        $("#updateItmBtn").prop("disabled", true);
+        // $("#deleteItmBtn").prop("disabled", true);
+        // $("#updateItmBtn").prop("disabled", true);
     } else {
         $("#deleteItmBtn").prop("disabled", false);
         $("#updateItmBtn").prop("disabled", false);

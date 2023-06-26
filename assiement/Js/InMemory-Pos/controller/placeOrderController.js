@@ -35,7 +35,6 @@ $('#addCartBtn').click(function () {
     }
 
     console.log(orderId, orderCusId, orderItmId, orderItmName, orderItmQty, orderItmUnitPrice, totals );
-    let deleteButton = $('<button>').text('Delete');
 
     let row = `<tr>
         <td>${orderId}</td>
@@ -52,8 +51,8 @@ $('#addCartBtn').click(function () {
     addCart.push(addToCartModel);
 
     var newRow = $(row);
-    newRow.find('.deleteBtn').click(function() {
-        $(this).closest('tr').remove();
+    newRow.find('#deleteBtn').click(function() {
+        // $(this).closest('tr').remove();
     });
 
 });
