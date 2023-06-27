@@ -5,14 +5,68 @@ $(document).ready(function() {
     $('#txtdate').val(formatDate(currentDate));
 
     $('#selectItemID,#selectCusID').click(function() {
-        populateSelectField();
+        // populateSelectField();
+        loadAllCustomersId();
+        loadAllItemsId();
     });
 
     clearPlaceOrdInputFields();
-    populateSelectField();
+
 });
 
+
+
 $('#addCartBtn').click(function () {
+    let qtyOnHand = $("#qtyOnHand").val();
+    let orderQty = $("#qty").val();
+
+    if ($("#qty").val() != "") {
+
+        if (qtyOnHand > orderQty) {
+            alert("This Item Not Available for this Quantity !!!")
+        } else {
+            updateQty();
+            addToCart();
+            // loadAllCart();
+            calculateTotal();
+
+            // $("#OrderID,#selectCusID,#customerName,#selectItemID,#itemName,#unitPrice,#qtyOnHand,#qty").val("");
+        }
+    } else {
+        alert("please Enter Order Quantity..");
+    }
+
+});
+function calculateTotal() {
+    let total = 0;
+
+    // Iterate over each item in the addCart array
+    for (let i = 0; i < addCart.length; i++) {
+        let item = addCart[i];
+        let itemTotal = parseFloat(item.itemUnitPrice) * parseFloat(item.itemQty);
+        total += itemTotal;
+    }
+
+    let cartTotal = total;
+    $("#txtAllItemTotal").val('Total RS.'+cartTotal+'/-');
+}
+
+
+function updateQty() {
+    let qtyOnHand = $('#qtyOnHand').val();
+    let order_qty = $('#qty').val();
+    let newQtyValue = qtyOnHand - order_qty;
+
+    $('#qtyOnHand').val(newQtyValue);
+}
+
+function removeItemInCart() {
+    $("#tblAddCart>tr").on('dblclick', function () {
+        $(this).remove();
+    });
+}
+
+function addToCart() {
     let orderId = $("#OrderID").val();
     let orderCusId = $("#selectCusID").val();
     let orderCusName = $("#customerName").val();
@@ -20,6 +74,7 @@ $('#addCartBtn').click(function () {
     let orderItmId = $("#selectItemID").val();
     let orderItmName = $("#itemName").val();
     let orderItmUnitPrice = $("#unitPrice").val();
+    let currentItemQtyOnHand = $("#qtyOnHand").val();
     let orderItmQty = $("#qty").val();
 
     let addToCart = [orderId, orderCusId, orderCusName, orderDate,orderItmId,orderItmName,orderItmUnitPrice,orderItmQty];
@@ -34,12 +89,12 @@ $('#addCartBtn').click(function () {
         total: totals=orderItmUnitPrice*orderItmQty
     }
 
-    console.log(orderId, orderCusId, orderItmId, orderItmName, orderItmQty, orderItmUnitPrice, totals );
+    console.log(orderId,orderItmId, orderCusId,  orderItmName, orderItmQty, orderItmUnitPrice, totals );
 
     let row = `<tr>
         <td>${orderId}</td>
-        <td>${orderCusId}</td>
         <td>${orderItmId}</td>
+        <td>${orderCusId}</td>
         <td>${orderItmName}</td>
         <td>${orderItmQty}</td>
         <td>${orderItmUnitPrice}</td>
@@ -47,19 +102,43 @@ $('#addCartBtn').click(function () {
         <td><button class="btn btn-danger" id="deleteBtn">Delete</button></td>
         </tr>`;
     $("#tblAddCart").append(row);
-    var addCart = [];
+
     addCart.push(addToCartModel);
 
     var newRow = $(row);
     newRow.find('#deleteBtn').click(function() {
-        // $(this).closest('tr').remove();
+        removeItemInCart();
     });
 
-});
+}
+
+function placeOrder() {
+    // Check if the addCart array is empty
+    if (addCart.length === 0) {
+        alert("No items in the cart. Please add items before placing an order.");
+        return;
+    }
+
+    // Save the items to the placeOrderDB array
+    placeOrderDB = [...addCart];
+
+
+    // Check if the items were successfully placed
+    if (placeOrderDB.length > 0) {
+        alert("Order placed successfully.");
+        $("#selectCusID,#customerName,#selectItemID,#itemName,#unitPrice,#qtyOnHand,#qty").val("");
+        $('tblAddCart').empty();
+        generateOrderID();
+    } else {
+        alert("Failed to place the order. Please try again.");
+    }
+}
+
 
 $('#placeOrderBtn').click(function() {
     incrementOrderID();
-    generateOrderID();
+    placeOrder()
+
 });
 
 var orderIdCount = 1;
@@ -67,6 +146,7 @@ var orderIdCount = 1;
 // Function to generate the order ID
 function generateOrderID() {
     var orderId = 'Ord-' + padNumber(orderIdCount, 3);
+    $('#OrderID').css({'color': '#0d6efd', 'font-weight': 'bold'});
     $('#OrderID').val(orderId); // Set the order ID to the text field
 }
 
@@ -91,15 +171,13 @@ function formatDate(date) {
     return year + '-' + month + '-' + day;
 }
 
-
-function populateSelectField() {
+/*function populateSelectField() {
     var selectCusField = $('#selectCusID');
     var selectItemField = $('#selectItemID');
-    var txtFieldCusName = $('#customerName'); // Assuming you have a text field with the ID 'customerName'
+    var txtFieldCusName = $('#customerName');
     var txtFieldItmName = $('#itemName');
     var txtFieldItmQtyOnHand = $('#qtyOnHand');
     var txtFieldItmUnitPrice = $('#unitPrice');
-
 
     selectCusField.empty();
     selectItemField.empty();
@@ -119,14 +197,17 @@ function populateSelectField() {
         var selectedCusIndex = $(this).val();
         if (selectedCusIndex !== null) {
             var selectedCustomer = customerDB[selectedCusIndex];
+            selectCusField.val(selectedCustomer.id); // Set the value of the select field
+            selectCusField.find('option:selected').text(selectedCustomer.id); // Set the text of the selected option
             txtFieldCusName.val(selectedCustomer.name);
         }
     });
 
+
     // Add options for each item ID
     itemDB.forEach(function(item, index) {
         var itmOption = $('<option>', {
-            value: index,
+            value: item.id,
             text: item.id
         });
 
@@ -141,10 +222,66 @@ function populateSelectField() {
             txtFieldItmName.val(selectedItem.name);
             txtFieldItmQtyOnHand.val(selectedItem.qty);
             txtFieldItmUnitPrice.val(selectedItem.unitPrice);
-
             $("#qty").focus();
         }
     });
+}*/
+
+
+
+function loadAllCustomersId() {
+    $('#selectCusID').empty();
+    $('#selectCusID').prepend('<option>Select CustomerID</option>');
+    for (let customer of customerDB) {
+        $('#selectCusID').append(`<option>${customer.id}</option>`);
+    }
+}
+
+function loadAllItemsId() {
+    $('#selectItemID').empty();
+    $('#selectItemID').prepend('<option>Select ItemID</option>');
+    for (let item of itemDB) {
+        $('#selectItemID').append(`<option>${item.id}</option>`);
+    }
+}
+
+
+$('#selectCusID').change(function () {
+    let cusID = $('#selectCusID').val();
+    let customer = searchCustomerForInputField(cusID);
+    if (customer != null) {
+        $('#customerName').val(customer.name);
+    }
+
+});
+$('#selectItemID').change(function () {
+    let itmID = $('#selectItemID').val();
+    let item = searchItemForInputField(itmID);
+    if (item != null) {
+        $('#itemName').val(item.name);
+        $('#qtyOnHand').val(item.qty);
+        $('#unitPrice').val(item.unitPrice);
+    }
+
+});
+
+function searchCustomerForInputField(cusId){
+
+    for (let customer of customerDB) {
+        if(customer.id==cusId){
+            return customer;
+        }
+    }
+    return null;
+}
+function searchItemForInputField(itmID){
+
+    for (let item of itemDB) {
+        if(item.id==itmID){
+            return item;
+        }
+    }
+    return null;
 }
 
 

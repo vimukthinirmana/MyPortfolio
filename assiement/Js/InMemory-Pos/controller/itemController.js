@@ -1,4 +1,8 @@
-// var itemDB = [];
+$(document).ready(function() {
+    generateItemID();
+});
+
+
 $("#saveItmBtn").click(function () {
 
     let itemId = $("#txtItemId").val();
@@ -40,6 +44,10 @@ $("#tblItem").on("click", "tr", function () {
     $("#txtItemName").val(itemName);
     $("#txtItemUnitprice").val(itemUnitPrice);
     $("#txtItemQty").val(itemQty);
+
+    $("#deleteItmBtn").prop("disabled", false);
+    $("#updateItmBtn").prop("disabled", false);
+    $("#saveItmBtn").prop("disabled", true);
 });
 
 $('#updateItmBtn').click(function () {
@@ -148,6 +156,38 @@ function bindTrEvents() {
     })
 }
 
+$('#clearItmBtn').click(function () {
+    $("#txtItemId,#txtItemName,#txtItemUnitprice,#txtItemQty").val("");
+    generateItemID();
+    $("#saveItmBtn").prop("disabled", false);
+    $("#deleteItmBtn").prop("disabled", true);
+    $("#updateItmBtn").prop("disabled", true);
+});
+
+
+var itmIdCount = 1;
+
+function generateItemID() {
+    var cusId = 'I00-' + padNumber(itmIdCount, 3);
+    $('#txtItemId').css({'color': '#0d6efd', 'font-weight': 'bold'});
+    $('#txtItemId').val(cusId);
+}
+
+// Helper function to pad the number with leading zeros
+function padNumber(number, length) {
+    var str = number.toString();
+    while (str.length < length) {
+        str = '0' + str;
+    }
+    return str;
+}
+
+
+function incrementItmID() {
+    itmIdCount++;
+}
+
+
 
 //validation for item
 const ItmIdRegex = /^(I00-)[0-9]{3}$/;
@@ -165,7 +205,8 @@ itmValidateArray.push({field: $("#txtItemQty"), regEx: ItmQtyRegex});
 function clearItemInputFields() {
     $("#txtItemId,#txtItemName,#txtItemUnitprice,#txtItemQty").val("");
     $("#txtItemId,#txtItemName,#txtItemUnitprice,#txtItemQty").css("border", "1px solid #ced4da");
-    $("#txtItemId").focus();
+    incrementItmID();
+    generateItemID();
     setBtn();
 }
 
@@ -240,23 +281,27 @@ function checkAll() {
 
 
 function setBtn() {
+    $("#saveItmBtn").prop("disabled", false);
     $("#deleteItmBtn").prop("disabled", true);
     $("#updateItmBtn").prop("disabled", true);
 
-    if (checkAll()) {
-        $("#saveItmBtn").prop("disabled", false);
-    } else {
-        // $("#saveItmBtn").prop("disabled", true);
-    }
 
-    let id = $("#txtItemId").val();
-    if (searchItem(id) == undefined) {
-        // $("#deleteItmBtn").prop("disabled", true);
-        // $("#updateItmBtn").prop("disabled", true);
-    } else {
-        $("#deleteItmBtn").prop("disabled", false);
-        $("#updateItmBtn").prop("disabled", false);
-    }
+
+
+    // if (checkAll()) {
+    //     $("#saveItmBtn").prop("disabled", false);
+    // } else {
+    //     $("#saveItmBtn").prop("disabled", true);
+    // }
+
+    // let id = $("#txtItemId").val();
+    // if (searchItem(id) == undefined) {
+    //     // $("#deleteItmBtn").prop("disabled", true);
+    //     // $("#updateItmBtn").prop("disabled", true);
+    // } else {
+    //     $("#deleteItmBtn").prop("disabled", false);
+    //     $("#updateItmBtn").prop("disabled", false);
+    // }
 
 }
 

@@ -1,4 +1,8 @@
-// var customerDB = []; //literal base array
+
+$(document).ready(function() {
+    generateCustomerID();
+});
+
 $('#saveCusBtn').click(function () {
 
     let customerId = $("#txtCustomerId").val();
@@ -28,6 +32,8 @@ $('#saveCusBtn').click(function () {
     customerDB.push(customerModel);
     clearCustomerInputFields();
     console.log(customerDB);
+
+
 });
 
 
@@ -42,6 +48,10 @@ $("#tblCustomer").on("click", "tr", function () {
     $("#txtCustomerName").val(customerName);
     $("#txtCustomerAddress").val(customerAddress);
     $("#txtCustomerContact").val(customerContact);
+
+    $("#deleteCusBtn").prop("disabled", false);
+    $("#updateCusBtn").prop("disabled", false);
+    $("#saveCusBtn").prop("disabled", true);
 });
 
 
@@ -131,6 +141,13 @@ function bindTrEvents() {
     });
 }
 
+$('#clearCusBtn').click(function () {
+    $("#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact").val("");
+    generateCustomerID();
+    $("#deleteCusBtn").prop("disabled", true);
+    $("#updateCusBtn").prop("disabled", true);
+    $("#saveCusBtn").prop("disabled", false);
+});
 
 function getAllCustomer() {
     $("#tblCustomer").empty();
@@ -156,9 +173,31 @@ function getAllCustomer() {
     }
 }
 
+var cusIdCount = 1;
 
-//validation for customer
-const CusIdRegex = /^(C00-)[0-9]{3}$/;
+function generateCustomerID() {
+    var cusId = 'C00-' + padNumber(cusIdCount, 3);
+    $('#txtCustomerId').css({'color': '#0d6efd', 'font-weight': 'bold'});
+    $('#txtCustomerId').val(cusId);
+}
+
+// Helper function to pad the number with leading zeros
+function padNumber(number, length) {
+    var str = number.toString();
+    while (str.length < length) {
+        str = '0' + str;
+    }
+    return str;
+}
+
+
+function incrementCusID() {
+    cusIdCount++;
+}
+
+
+// validation for customer
+const CusIdRegex = /^(C00-)[0-9]{6,}$/;
 const CusNameRegex = /^[A-Za-z ]{5,}$/;
 const CusAddressRegex = /^[A-Za-z0-9 ]{5,}$/;
 const CusContactRegex = /^[0-9]{10,}$/;
@@ -170,14 +209,18 @@ cusValidateArray.push({field: $("#txtCustomerName"), regEx: CusNameRegex});
 cusValidateArray.push({field: $("#txtCustomerAddress"), regEx: CusAddressRegex});
 cusValidateArray.push({field: $("#txtCustomerContact"), regEx: CusContactRegex});
 
+
 function clearCustomerInputFields() {
-    $("#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact").val("");
-    $("#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact").css("border", "1px solid #ced4da");
-    $("#txtCustomerID").focus();
+    $("#txtCustomerName,#txtCustomerAddress,#txtCustomerContact").val("");
+    $("#txtCustomerName,#txtCustomerAddress,#txtCustomerContact").css("border", "1px solid #ced4da");
+    incrementCusID();
+    generateCustomerID();
     setBtn();
 }
 
 setBtn();
+
+
 
 
 //disable tab
@@ -205,7 +248,7 @@ $("#txtCustomerId,#txtCustomerName,#txtCustomerAddress,#txtCustomerContact").on(
             }
         } else {
             if (checkValidations(cusValidateArray[indexNo])) {
-                saveCustomer();
+                // saveCustomer();
             }
         }
     }
@@ -251,20 +294,21 @@ function checkAll() {
 function setBtn() {
     $("#deleteCusBtn").prop("disabled", true);
     $("#updateCusBtn").prop("disabled", true);
+    $("#saveCusBtn").prop("disabled", false);
 
-    if (checkAll()) {
-        $("#saveCusBtn").prop("disabled", false);
-    } else {
-        // $("#saveCusBtn").prop("disabled", true);
-    }
+    // if (checkAll()) {
+    //     $("#saveCusBtn").prop("disabled", false);
+    // } else {
+    //     $("#saveCusBtn").prop("disabled", true);
+    // }
 
-    let id = $("#txtCustomerId").val();
-    if (searchCustomer(id) == undefined) {
-        // $("#deleteCusBtn").prop("disabled", true);
-        // $("#updateCusBtn").prop("disabled", true);
-    } else {
-        $("#deleteCusBtn").prop("disabled", false);
-        $("#updateCusBtn").prop("disabled", false);
-    }
+    // let id = $("#txtCustomerId").val();
+    // if (searchCustomer(id) == undefined) {
+    //     $("#deleteCusBtn").prop("disabled", true);
+    //     $("#updateCusBtn").prop("disabled", true);
+    // } else {
+    //     $("#deleteCusBtn").prop("disabled", false);
+    //     $("#updateCusBtn").prop("disabled", false);
+    // }
 
 }

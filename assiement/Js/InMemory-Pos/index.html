@@ -52,7 +52,7 @@
                     <form class="row g-3">
                         <div class="col-md-6">
                             <label for="txtCustomerId">ID</label>
-                            <input type="text" class="form-control" id="txtCustomerId">
+                            <input type="text" class="form-control" readonly="readonly" id="txtCustomerId">
                         </div>
                         <div class="col-md-6">
                             <label for="txtCustomerName">Name</label>
@@ -72,7 +72,7 @@
                             <button class="btn btn-primary" id="saveCusBtn">Save</button>
                             <button class="btn btn-success" id="updateCusBtn">Update</button>
                             <button class="btn btn-danger" id="deleteCusBtn">Delete</button>
-<!--                            <button class="btn btn-dark" id="getAllCusBtn">getAll</button>-->
+                            <button class="btn btn-warning text-white" id="clearCusBtn">clear</button>
                         </div>
                     </form>
 
@@ -107,7 +107,7 @@
                     <form class="row g-3">
                         <div class="col-md-6">
                             <label for="txtItemId" class="form-label">Item ID</label>
-                            <input type="id" class="form-control" id="txtItemId">
+                            <input type="id" class="form-control"  readonly="readonly" id="txtItemId">
                         </div>
                         <div class="col-md-6">
                             <label for="txtItemName" class="form-label">Item Name</label>
@@ -127,7 +127,7 @@
                             <button class="btn btn-primary" id="saveItmBtn">Save</button>
                             <button class="btn btn-success" id="updateItmBtn">Update</button>
                             <button class="btn btn-danger" id="deleteItmBtn">Delete</button>
-<!--                            <button class="btn btn-dark" id="getAllItmBtn">getAll</button>-->
+                            <button class="btn btn-warning text-white" id="clearItmBtn">clear</button>
                         </div>
                     </form>
 
@@ -277,7 +277,7 @@
                         <label for="customerName" class="form-label">CustomerName</label>
                         <input type="text" class="form-control" readonly="readonly" id="customerName">
                     </div>
-                    <div class="col-md-2 m-3">
+                    <div class="col-md-3 m-3">
                         <label for="selectItemID" class="form-label">Item ID</label>
                         <select class="form-select"  readonly="readonly" id="selectItemID">
                         </select>
@@ -326,7 +326,7 @@
                         </tbody>
                     </table>
                     <div class="col-md-2 m-2">
-                        <input type="Total" class="form-control" id="total" placeholder="TotalPrice :">
+                        <input type="Total" class="form-control" id="txtAllItemTotal" placeholder="TotalPrice :">
                     </div>
                 </section>
                 <div class="col-12  m-3 ">
