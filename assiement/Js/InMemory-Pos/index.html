@@ -150,7 +150,7 @@
         </section>
     </main>
 
-    <!--    order ------------------------------------------------->
+    <!--    orderDetails ------------------------------------------------->
     <main id="order-section" class="tab-contents bg-primary-subtle p-5">
             <section class="row p-4 m-0 object-fit-contain col-12" id="orderDetails">
                 <section class="col border-dark m-3 border rounded object-fit-contain col-12">
@@ -158,97 +158,18 @@
                     <table class="table table-light table-striped">
                         <thead>
                         <tr>
-                            <th style="background-color: #0d6efd" scope="col">Oder ID</th>
-                            <th style="background-color: #0d6efd" scope="col">Date</th>
-                            <th style="background-color: #0d6efd" scope="col">Customer ID</th>
-                            <th style="background-color: #0d6efd" scope="col">Item ID</th>
+                            <th style="background-color: #0d6efd" scope="col">OrderID</th>
+                            <th style="background-color: #0d6efd" scope="col">OrderDate</th>
+                            <th style="background-color: #0d6efd" scope="col">ItemID</th>
+                            <th style="background-color: #0d6efd" scope="col">CustomerID</th>
+                            <th style="background-color: #0d6efd" scope="col">ItemName</th>
                             <th style="background-color: #0d6efd" scope="col">Qty</th>
-                            <th style="background-color: #0d6efd" scope="col">Discount</th>
+                            <th style="background-color: #0d6efd" scope="col">UnitPrice</th>
                             <th style="background-color: #0d6efd" scope="col">Total</th>
-                            <th style="background-color: #0d6efd" scope="col">Action</th>
+<!--                            <th style="background-color: #0d6efd" scope="col">Action</th>-->
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">Ord-001</th>
-                            <td>2023-05-13</td>
-                            <td>C001</td>
-                            <td>I001</td>
-                            <td>1</td>
-                            <td>0</td>
-                            <td>230</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Ord-002</th>
-                            <td>2023-05-14</td>
-                            <td>C002</td>
-                            <td>I002</td>
-                            <td>2</td>
-                            <td>0</td>
-                            <td>460</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Ord-003</th>
-                            <td>2023-05-15</td>
-                            <td>C004</td>
-                            <td>I002</td>
-                            <td>3</td>
-                            <td>0</td>
-                            <td>180</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Ord-004</th>
-                            <td>2023-05-15</td>
-                            <td>C005</td>
-                            <td>I002</td>
-                            <td>4</td>
-                            <td>0</td>
-                            <td>300</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Ord-005</th>
-                            <td>2023-05-14</td>
-                            <td>C003</td>
-                            <td>I001</td>
-                            <td>5</td>
-                            <td>0</td>
-                            <td>200</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Ord-006</th>
-                            <td>2023-05-14</td>
-                            <td>C008</td>
-                            <td>I002</td>
-                            <td>2</td>
-                            <td>0</td>
-                            <td>100</td>
-                            <td>
-                                <button type="button" class="btn btn-warning">Edit</button>
-                                <button type="button" class="btn btn-danger">Delete</button>
-                            </td>
-                        </tr>
-
-
+                        <tbody id="orderDetailsTbl">
                         </tbody>
                     </table>
                 </section>
@@ -325,7 +246,7 @@
                         <tbody id="tblAddCart">
                         </tbody>
                     </table>
-                    <div class="col-md-2 m-2">
+                    <div class="col-md-4 m-2">
                         <input type="Total" class="form-control" id="txtAllItemTotal" placeholder="TotalPrice :">
                     </div>
                 </section>
