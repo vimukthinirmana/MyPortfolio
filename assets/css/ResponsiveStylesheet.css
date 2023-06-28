@@ -1287,7 +1287,8 @@
         justify-content: space-between;
         align-items: center;
         max-width: 100%;
-        height: 522px;
+        height: 50%;
+        /*border: 1px solid red;*/
     }
 
     .home-background-image {
@@ -1403,5 +1404,1147 @@
         height: auto;
         z-index: 0;
     }
+
+
+
+    /*-------- about-page -------------*/
+    #about {
+        position: absolute;
+        padding: 0;
+        width: 100%;
+        height: 50%;
+        /*border: 1px solid red;*/
+    }
+
+    .about-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .about-page > .about-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .about-page aside {
+        position: absolute;
+        display: flex;
+        top: 10%;
+        left: 0px;
+        width: 36%;
+        height: 70%;
+        /*border: 1px solid red;*/
+    }
+
+    .about-page aside img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    .about-page > article {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        left: 34%;
+        top: 5%;
+        width: 65%;
+        height: 90%;
+        /*border: 1px solid red;*/
+    }
+
+    .about-page > article > h2 {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0px;
+        width: fit-content;
+        left: 40%;
+        font-size: 100%;
+        margin: 0;
+        /*border: 1px solid red;*/
+    }
+
+    .about-page > article > p {
+        font-size: 65%;
+        /* line-height: 1.5; */
+        position: absolute;
+        top: 10%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        width: 100%;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+ /*border: 1px solid red;*/
+}
+
+
+
+    /*-------- skill-page -------------*/
+    #skill {
+        position: absolute;
+        /*border: 1px solid red;*/
+        width: 100%;
+        height: 50%;
+        top: 109vh;
+        left: 0;
+        padding: 0;
+    }
+
+    #skill > img {
+        position: absolute;
+        left: 0px;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        /*border: 1px solid red;*/
+    }
+
+    .skill-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tab-titles {
+        display: flex;
+        top: 0;
+        position: absolute;
+        justify-content: space-around;
+        align-content: center;
+        /*border: 1px solid red;*/
+        width: 80%;
+        height: 10%;
+    }
+
+    .tab-links {
+        margin-right: 20px;
+        font-size: 100%;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+    }
+
+    #skills-section {
+        position: absolute;
+        /*border: 1px solid #a11fb2;*/
+        top: 10%;
+        height: 85%;
+        width: 100%;
+        left: 0px;
+    }
+
+    #skills-section > div > h3 {
+        margin: 0;
+        position: absolute;
+        top: 0px;
+        /*border: 1px solid green;*/
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 100%;
+    }
+
+    #skills-section > div > .box-container-skills {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        /*border: 1px solid peru;*/
+        top: 10%;
+        left: 0px;
+        height: 90%;
+        width: 100%;
+    }
+
+    #skills-section > div > .box-container-skills > div {
+        width: 20%;
+        height: 35%;
+        margin: 10px;
+    }
+
+    #skills-section > div > .box-container-skills > div > img {
+        background-position: center;
+        background-size: cover;
+        width: 40%;
+        height: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        bottom: 20%;
+        left: 32%;
+        margin: 0;
+    }
+
+    #skills-section > div > .box-container-skills > div > h4 {
+        display: flex;
+        margin-top: 10px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+        top: 0%;
+        font-size: 100%;
+        font-weight: bold;
+    }
+
+
+    #experience-section {
+        position: absolute;
+        /*border: 1px solid #a11fb2;*/
+        top: 10%;
+        height: 89%;
+        width: 100%;
+        left: 0px;
+    }
+
+    #experience-section > div > h3 {
+        margin: 0;
+        position: absolute;
+        top: 0px;
+        /*border: 1px solid green;*/
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 100%;
+    }
+
+    #experience-section > div > .box-container-experience {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        /*border: 1px solid peru;*/
+        top: 10%;
+        left: 0;
+        height: 89%;
+        width: 100%;
+    }
+
+    #experience-section > div > .box-container-experience > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 21%;
+        height: 40%;
+        margin: 5px;
+        border-radius: 20px;
+    }
+
+    #experience-section > div > .box-container-experience > div:nth-child(1) > .parentage-circle {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        width: 10%;
+        height: 20%;
+        border: 1px solid black;
+        border-radius: 100%;
+    }
+
+    #experience-section > div > .box-container-experience > div:nth-child(2) > .parentage-circle {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        width: 10%;
+        height: 20%;
+        border: 1px solid black;
+        border-radius: 100%;
+    }
+
+    #experience-section > div > .box-container-experience > div:nth-child(3) > .parentage-circle {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        width: 10%;
+        height: 20%;
+        border: 1px solid black;
+        border-radius: 100%;
+    }
+
+    #experience-section > div > .box-container-experience > div:nth-child(4) > .parentage-circle {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        width: 10%;
+        height: 20%;
+        border: 1px solid black;
+        border-radius: 100%;
+    }
+
+
+    #experience-section > div > .box-container-experience > div > h4 {
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+        top: 0%;
+        font-size: 100%;
+        font-weight: bold;
+    }
+
+    #experience-section > div > .box-container-experience > div > span {
+        top: 43%;
+        margin: 0;
+    }
+
+    #experience-section > div > .box-container-experience > div:nth-child(1) > span > i {
+        top:0%
+    }
+
+    #experience-section > div > .box-container-experience > div:nth-child(2) > span > i {
+        top: 0px;
+    }
+
+    #experience-section > div > .box-container-experience > div:nth-child(3) > span > i {
+        top: 60%;
+    }
+
+    #experience-section > div > .box-container-experience > div:nth-child(4) > span > i {
+        top: 60%;
+    }
+
+    #experience-section > div > .box-container-experience > div > span > i {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-size: 50%;
+    }
+
+    #experience-section > div > .box-container-experience > div > p {
+        position: relative;
+        display: flex;
+        align-items: center;
+        top: 0%;
+        margin: 2px;
+        font-size: 25%;
+        width: fit-content;
+    }
+
+    #education-section {
+        position: absolute;
+        top: 10%;
+        height: 88%;
+        width: 100%;
+        left: 0px;
+        /*border: 1px solid green;*/
+    }
+
+    #education-section > div > h3 {
+        margin: 0;
+        position: absolute;
+        top: 1%;
+        /*border: 1px solid green;*/
+        width: 100%;
+        height: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 100%;
+    }
+
+    #education-section > div > .box-container-education {
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        /*border: 1px solid peru;*/
+        top: 10%;
+        left: 0;
+        height: 90%;
+        width: 100%;
+    }
+
+    #education-section > div > .box-container-education > div {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 30%;
+        height: 100%;
+        margin: 0;
+        /*border: 1px solid peru;*/
+        }
+
+        #education-section > div > .box-container-education > div > .book {
+            position: relative;
+            border-radius: 10px;
+            width: 70%;
+            height: 70%;
+            /* -webkit-perspective: 2000px; */
+            /* perspective: 2000px; */
+            display: flex;
+            flex-wrap: wrap;
+            /* -webkit-box-align: center; */
+            -ms-flex-align: center;
+            align-items: center;
+            /* -webkit-box-pack: center; */
+            -ms-flex-pack: center;
+            justify-content: center;
+            /*border: 1px solid peru;*/
+        }
+
+        #education-section > div > .box-container-education > div > .book > .cover {
+            top: 0;
+            position: absolute;
+            background-color: lightgray;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            /*-webkit-box-pack: center;*/
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    #education-section > div > .box-container-education > div > .book > p {
+        font-size: 60%;
+        font-weight: bolder;
+        /*border: 1px solid peru;*/
+    }
+
+    #education-section > div > .box-container-education > div > .book > .cover > p {
+        font-size: 85%;
+        font-weight: bold;
+        font-family: cursive;
+        color: #545454;
+        margin: 0;
+        width: 100%;
+        font-style: oblique;
+        /*border: 1px solid blue;*/
+    }
+
+
+
+
+    /*-------- service-page -------------*/
+    #services {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        /*border: 1px solid red;*/
+        display: flex;
+        top: 159vh;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .services-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .services-page > h2 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*border: 1px solid black;*/
+        top: 0%;
+        margin: 0;
+        width: 100%;
+        height: 12%;
+        font-weight: bold;
+        font-size: 100%;
+    }
+
+    .box-container-services {
+        /*border: 1px solid brown;*/
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 87%;
+        top: 10%;
+    }
+
+    .box-container-services > section {
+        top: 0px;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 52%;
+        height: 80%;
+        border-radius: 20px;
+        margin: 5px;
+        /*border: 1px solid blue;*/
+    }
+
+    .box-container-services > section > div > {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0px;
+    }
+
+    .box-container-services > section > div > h4 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 80%;
+        font-family: Alaska;
+        /*border: 1px solid #a11fb2;*/
+        padding: 0px;
+        top: 0px;
+    }
+
+    .box-container-services > section > div > p {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 35%;
+        /*border: 1px solid #ff253a;*/
+        padding: 10px;
+        width: fit-content;
+        height: 60%;
+    }
+
+    /*-------- project-page -------------*/
+    #project {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        /*border: 1px solid blue;*/
+        display: flex;
+        top: 209vh;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .project-page > h2 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0px;
+        width: 100%;
+        height: 12%;
+        font-size: 100%;
+        margin: 0;
+    }
+
+
+    .project-page > button {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: 87%;
+        padding: 8px 20px;
+        border-radius: 50px;
+        border: 0;
+        letter-spacing: 1.5px;
+        font-size: 80%;
+    }
+
+    .box-container-projects {
+        /*border: 1px solid #ffbb22;*/
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 75%;
+        background: white;
+        top: 10%;
+    }
+
+    .box-container-projects > section {
+        /*border: 1px solid blue;*/
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 35%;
+        height: 40%;
+        border-radius: 15px;
+        margin: 6px;
+        overflow: hidden;
+    }
+
+    .box-container-projects > section:hover img {
+        transform: scale(1.1);
+        transition-duration: 0.5s;
+    }
+
+    .box-container-projects > section > img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+    }
+
+
+    .layer-project {
+        width: 100%;
+        height: 0px;
+        border-radius: 15px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0px 10px;
+        text-align: center;
+        font-size: 80%;
+        transition: height 0.8s;
+        /*border: 1px solid blue;*/
+    }
+
+    .layer-project > h4 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        font-weight: bold;
+        font-size: 100%;
+        font-family: Alaska;
+        /*border: 1px solid #a11fb2;*/
+        top: 2%;
+        margin: 0;
+    }
+
+    .layer-project > p {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fcfcfd;
+        font-weight: bold;
+        font-size: 80%;
+        font-family: initial;
+        /*border: 1px solid #ff253a;*/
+        padding: 10px;
+        width: fit-content;
+    }
+
+    .layer-project > a {
+        position: absolute;
+        top: 102px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+        font-size: 18px;
+        line-height: 60px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+    }
+
+    .box-container-projects > section:hover > .layer-project {
+        height: 100%;
+    }
+
+
+
+
+
+    /*-------- assignment-page -------------*/
+    #assignment {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        /*border: 1px solid #ff253a;*/
+        display: flex;
+        top: 259vh;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .assignment-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .assignment-page > h2 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*border: 1px solid black;*/
+        top: 0px;
+        width: 100%;
+        height: 12%;
+        font-size: 100%;
+        margin: 0;
+    }
+
+    .assignment-page > button {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: 87%;
+        padding: 8px 20px;
+        border-radius: 50px;
+        border: 0;
+        font-size: 80%;
+        transition: all .5s ease;
+    }
+
+    .assignment-page > button:hover {
+        letter-spacing: 3px;
+        background-color: blueviolet;
+        color: hsl(0, 0%, 100%);
+        box-shadow: blueviolet 0px 7px 29px 0px;
+    }
+
+    .assignment-page > button:active {
+        letter-spacing: 3px;
+        background-color: hsl(261deg 80% 48%);
+        color: hsl(0, 0%, 100%);
+        box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+        transform: translateY(10px);
+        transition: 100ms;
+    }
+
+    .assignment-container {
+        /*border: 1px solid #a11fb2;*/
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        top: 10%;
+        width: 100%;
+        height: 75%;
+    }
+
+    .assignment-card {
+        top: 10px;
+        margin: 0px 10px 10px 10px;
+        width: 35%;
+        height: 40%;
+        display: flex;
+        border-radius: 20px;
+        justify-content: center;
+        position: relative;
+        /*border: 1px solid #a11fb2;*/
+    }
+
+    .assignment-card > div {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
+        cursor: pointer;
+        z-index: 10;
+        transition: all .4s;
+        background-color: #fff;
+        /*border: 1px solid #a11fb2;*/
+    }
+
+    .assignment-card:hover div {
+        transform: translateY(-20px);
+        border-radius: 10px;
+        width: 60%;
+        height: 60%;
+    }
+
+    .assignment-card > div > img {
+        background-size: cover;
+        background-position: center;
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .assignment-card > p {
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 48px;
+        /*border: 1px solid #a11fb2;*/
+    }
+
+    .assignment-card > a {
+        display: inline-block;
+        justify-content: center;
+        position: absolute;
+        bottom: 20px;
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        /*border: 1px solid #a11fb2;*/
+    }
+
+    .assignment-card:hover div > img {
+        border-radius: 10px;
+    }
+
+
+    /*-------- gallery-page -------------*/
+    #gallery {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+         /*border: 1px solid red;*/
+        display: flex;
+        top: 309vh;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .gallery-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .gallery-container {
+        /*border: 1px solid #a11fb2;*/
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 10%;
+        width: 100%;
+        height: 89%;
+    }
+
+    .gallery-page > h2 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*border: 1px solid black;*/
+        top: 0px;
+        width: 100%;
+        height: 12%;
+        font-size: 100%;
+        user-select: none;
+        margin: 0;
+    }
+
+    .cards {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card {
+        /*border: 1px solid black;*/
+        background-size: cover;
+        background-position: center;
+        /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 1.0);
+        z-index: 1;
+        position: absolute;
+        width: 200px;
+        height: 120px;
+        border-radius: 10px;
+        transition: all .5s ease-out;
+        overflow: hidden;
+        transform: translateX(0px) translateY(0px) perspective(905px) rotateX(0deg) rotateY(0deg) rotateZ(-8deg);
+    }
+
+    .cardDetails > img {
+        width: 200px;
+        height: 120px;
+        border-radius: 10px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card.one {
+        top: -98px;
+        left: -170px;
+    }
+
+    .card.two {
+        top: -62px;
+        left: -86px;
+    }
+
+    .card.three {
+        top: -15px;
+        left: -12px;
+    }
+
+
+    /*-------- contact-page -------------*/
+    #contact {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        /*border: 1px solid indigo;*/
+        display: flex;
+        top: 361vh;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: -9px;
+    }
+
+    .contact-page > h2 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid black; */
+        top: 4px;
+        width: 100%;
+        height: 12%;
+        font-size: 100%;
+        margin: 0;
+    }
+
+    .contact-page > h3 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*border: 1px solid black;*/
+        top: 6%;
+        width: 100%;
+        height: 15%;
+        font-size: 100%;
+        margin: 0;
+    }
+
+    .contact-page > h5 {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 1px solid black; */
+        top: 18%;
+        width: 100%;
+        height: 12%;
+        font-size: 55%;
+        margin: 0;
+    }
+
+
+    .contact-form {
+        /*border: 1px solid red;*/
+        position: absolute;
+        display: flex;
+        text-align: left;
+        max-width: 57%;
+        height: 66%;
+        left: 0px;
+        top: 27%;
+    }
+
+    .contact-form label {
+        font-size: 12px;
+        display: block;
+        margin-bottom: 0px;
+        text-align: left;
+    }
+
+    .contact-form > fieldset {
+        width: 300px;
+        margin: 0;
+        height: fit-content;
+        padding: 10px 20px 10px 20px;
+        border-radius: 10px;
+        border: 1px solid #e5e5e5;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        width: 100%;
+        padding: 0px;
+        margin-bottom: 0px;
+        font-size: 13px;
+        border: 1px solid #ada9a9;
+        border-radius: 4px;
+        resize: none;
+    }
+
+    .contact-form textarea {
+        height: 50px;
+    }
+
+    .contact-form button[type="submit"] {
+        background-color: #333333;
+        display: flex;
+        color: #fff;
+        align-items: center;
+        padding: 6px 15px;
+        border: none;
+        border-radius: 20px;
+        font-size: 80%;
+        top: 78%;
+        position: absolute;
+    }
+
+    address {
+        font-size: 100%;
+        color: #888;
+    }
+
+    address a {
+        display: inline-block;
+        margin-right: 20px;
+        color: #888;
+    }
+
+
+    .contact-page > img {
+        background-position: center;
+        background-size: cover;
+        width: 104%;
+        height: 100%;
+    }
+
+    /*-------------address-contact---------------------*/
+    .contact-page > .address-contact {
+        position: absolute;
+        right: 0%;
+        top: 22%;
+        height: 72%;
+        width: 42%;
+        /*border: 1px solid blue;*/
+    }
+
+    .contact-page > .address-contact > .contact-box {
+        position: relative;
+        margin: 1px;
+        height: 50px;
+        overflow: hidden;
+    }
+
+    .contact-page > .address-contact > .contact-box > h3 {
+        position: relative;
+        left: 57px;
+        width: fit-content;
+        font-weight: bold;
+        margin: 0;
+        top: 15px;
+        font-size: 80%;
+    }
+
+    .contact-page > .address-contact > .contact-box > .contact-circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 12px;
+        left: 23px;
+        font-size: 11px;
+        position: absolute;
+    }
+
+    .contact-page > .address-contact > .contact-box > h4 {
+        top: 7px;
+        position: relative;
+        font-size: 45%;
+        left: 59px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    /*----------------------------- footer ------------------------------------*/
+    #footer {
+        position: absolute;
+        width: 100%;
+        height: 120px;
+         /*border: 1px solid red;*/
+        display: flex;
+        top: 414vh;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footer > p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 30px;
+        width:100%;
+        font-size: 100%;
+        color: #cbcbcb;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
